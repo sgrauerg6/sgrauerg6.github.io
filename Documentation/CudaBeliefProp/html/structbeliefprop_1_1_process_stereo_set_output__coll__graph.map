@@ -1,0 +1,6 @@
+<map id="beliefprop::ProcessStereoSetOutput" name="beliefprop::ProcessStereoSetOutput">
+<area shape="rect" id="node1" title="Structure with output disparity map, runtime, and other evaluation data." alt="" coords="5,171,193,212"/>
+<area shape="rect" id="node2" href="$class_run_data.html" title="Class to store headers with data corresponding to current program run and evaluation." alt="" coords="15,81,93,108"/>
+<area shape="rect" id="node3" href="$class_disparity_map.html" title=" " alt="" coords="118,81,286,108"/>
+<area shape="rect" id="node4" href="$class_bp_image.html" title="Class to define images that are used in bp processing." alt="" coords="143,5,261,32"/>
+</map>
