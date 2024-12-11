@@ -26,6 +26,7 @@ var namespacerun__environment =
     [ "GetBytesAlignMemory", "namespacerun__environment.html#ac68b9fea12a8756652bce761d7a0cdda", null ],
     [ "GetNumDataAlignWidth", "namespacerun__environment.html#a1531965e4d9740a8446833f2fa7e3163", null ],
     [ "RunSettings", "namespacerun__environment.html#a9639034960aa9cbd5836e5320f1a2a35", null ],
+    [ "kAccelerationDescHeader", "namespacerun__environment.html#ad0f0355486540b6e9798b3349d48a1d9", null ],
     [ "kBytesAlignMemHeader", "namespacerun__environment.html#a1c871dad08fdced4234b98ec0cbef783", null ],
     [ "kCPUThreadsPinnedHeader", "namespacerun__environment.html#a00245c690fb6c14dafd1b1106d028140", null ],
     [ "kDataSizeToNameMap", "namespacerun__environment.html#ab15f9538874f71da40e07434e820a1d7", null ],

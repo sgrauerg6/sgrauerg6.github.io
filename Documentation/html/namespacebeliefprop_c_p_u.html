@@ -87,6 +87,9 @@ $(document).ready(function(){initNavTree('namespacebeliefprop_c_p_u.html',''); i
 <div class="title">beliefpropCPU Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Namespace to define global kernel functions for optimized belief propagation processing on the CPU using OpenMP and SIMD vectorization.  
+<a href="namespacebeliefprop_c_p_u.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -199,7 +202,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8ae046dfc3fc8d99f38a353906a7bf10"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebeliefprop_c_p_u.html#a8ae046dfc3fc8d99f38a353906a7bf10">PrintDataAndMessageValsToPointKernel</a> (unsigned int x_val, unsigned int y_val, const <a class="el" href="structbeliefprop_1_1_bp_level_properties.html">beliefprop::BpLevelProperties</a> &amp;current_bp_level, const T *data_cost_checkerboard_0, const T *data_cost_checkerboard_1, const T *message_u_checkerboard_0, const T *message_d_checkerboard_0, const T *message_l_checkerboard_0, const T *message_r_checkerboard_0, const T *message_u_checkerboard_1, const T *message_d_checkerboard_1, const T *message_l_checkerboard_1, const T *message_r_checkerboard_1)</td></tr>
 <tr class="separator:a8ae046dfc3fc8d99f38a353906a7bf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Namespace to define global kernel functions for optimized belief propagation processing on the CPU using OpenMP and SIMD vectorization. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a95cc6d0a18e912e0af921f35441c4594"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95cc6d0a18e912e0af921f35441c4594">&#9670;&nbsp;</a></span>CopyMsgDataToNextLevel()</h2>
 
@@ -372,7 +377,7 @@ template&lt;RunDataProcess_t T, RunDataVectProcess_t U&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01674">1674</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01685">1685</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 
 </div>
 </div>
@@ -394,7 +399,7 @@ template&lt;RunDataProcess_t T, RunDataVectProcess_t U, unsigned int DISP_VALS&g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01566">1566</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01577">1577</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 
 </div>
 </div>
@@ -468,7 +473,7 @@ template&lt;RunData_t T, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00467">467</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00478">478</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -551,7 +556,7 @@ template&lt;RunData_t T, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00498">498</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00509">509</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -646,7 +651,7 @@ template&lt;RunData_t T, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00532">532</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00543">543</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -741,7 +746,7 @@ template&lt;RunData_t T, RunDataVect_t U&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01799">1799</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01810">1810</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 
 </div>
 </div>
@@ -821,7 +826,7 @@ template&lt;RunData_t T, RunDataVect_t U, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01785">1785</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01796">1796</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 
 </div>
 </div>
@@ -907,14 +912,14 @@ template&lt;RunData_t T, RunDataVect_t U, RunDataProcess_t V, RunDataVectProcess
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01701">1701</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01712">1712</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacebeliefprop_c_p_u_adb8b086a2bd4634084003584c63c341b_cgraph.png" border="0" usemap="#anamespacebeliefprop_c_p_u_adb8b086a2bd4634084003584c63c341b_cgraph" alt=""/></div>
 <map name="anamespacebeliefprop_c_p_u_adb8b086a2bd4634084003584c63c341b_cgraph" id="anamespacebeliefprop_c_p_u_adb8b086a2bd4634084003584c63c341b_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,197,47"/>
-<area shape="rect" href="namespacebeliefprop.html#ab6a5d9752a11f9ee11a7792ce1538a2a" title=" " alt="" coords="245,5,432,47"/>
+<area shape="rect" href="namespacebeliefprop.html#ab6a5d9752a11f9ee11a7792ce1538a2a" title="Retrieve the current 1&#45;D index value of the given point at the given disparity in the data cost and m..." alt="" coords="245,5,432,47"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1025,14 +1030,14 @@ template&lt;RunData_t T, RunDataVect_t U, RunDataProcess_t V, RunDataVectProcess
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01593">1593</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01604">1604</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacebeliefprop_c_p_u_ae4241f07ead9d7e35ce97fda430d163a_cgraph.png" border="0" usemap="#anamespacebeliefprop_c_p_u_ae4241f07ead9d7e35ce97fda430d163a_cgraph" alt=""/></div>
 <map name="anamespacebeliefprop_c_p_u_ae4241f07ead9d7e35ce97fda430d163a_cgraph" id="anamespacebeliefprop_c_p_u_ae4241f07ead9d7e35ce97fda430d163a_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,197,47"/>
-<area shape="rect" href="namespacebeliefprop.html#ab6a5d9752a11f9ee11a7792ce1538a2a" title=" " alt="" coords="245,5,432,47"/>
+<area shape="rect" href="namespacebeliefprop.html#ab6a5d9752a11f9ee11a7792ce1538a2a" title="Retrieve the current 1&#45;D index value of the given point at the given disparity in the data cost and m..." alt="" coords="245,5,432,47"/>
 </map>
 </div>
 
@@ -1132,14 +1137,14 @@ template&lt;RunData_t T, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01815">1815</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01826">1826</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacebeliefprop_c_p_u_ae0f2240415020ec80d3b79ad3cd35afd_cgraph.png" border="0" usemap="#anamespacebeliefprop_c_p_u_ae0f2240415020ec80d3b79ad3cd35afd_cgraph" alt=""/></div>
 <map name="anamespacebeliefprop_c_p_u_ae0f2240415020ec80d3b79ad3cd35afd_cgraph" id="anamespacebeliefprop_c_p_u_ae0f2240415020ec80d3b79ad3cd35afd_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,225,47"/>
-<area shape="rect" href="namespacebeliefprop.html#ab6a5d9752a11f9ee11a7792ce1538a2a" title=" " alt="" coords="273,5,460,47"/>
+<area shape="rect" href="namespacebeliefprop.html#ab6a5d9752a11f9ee11a7792ce1538a2a" title="Retrieve the current 1&#45;D index value of the given point at the given disparity in the data cost and m..." alt="" coords="273,5,460,47"/>
 </map>
 </div>
 
@@ -1239,14 +1244,14 @@ template&lt;RunData_t T, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01880">1880</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01891">1891</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacebeliefprop_c_p_u_a8ae046dfc3fc8d99f38a353906a7bf10_cgraph.png" border="0" usemap="#anamespacebeliefprop_c_p_u_a8ae046dfc3fc8d99f38a353906a7bf10_cgraph" alt=""/></div>
 <map name="anamespacebeliefprop_c_p_u_a8ae046dfc3fc8d99f38a353906a7bf10_cgraph" id="anamespacebeliefprop_c_p_u_a8ae046dfc3fc8d99f38a353906a7bf10_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,225,47"/>
-<area shape="rect" href="namespacebeliefprop.html#ab6a5d9752a11f9ee11a7792ce1538a2a" title=" " alt="" coords="273,5,460,47"/>
+<area shape="rect" href="namespacebeliefprop.html#ab6a5d9752a11f9ee11a7792ce1538a2a" title="Retrieve the current 1&#45;D index value of the given point at the given disparity in the data cost and m..." alt="" coords="273,5,460,47"/>
 </map>
 </div>
 
@@ -1352,7 +1357,7 @@ template&lt;RunData_t T, unsigned int DISP_VALS, run_environment::AccSetting ACC
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01117">1117</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01128">1128</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1480,16 +1485,16 @@ template&lt;RunData_t T, RunDataVect_t U, RunDataProcess_t V, RunDataVectProcess
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01191">1191</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l01202">1202</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacebeliefprop_c_p_u_a64141ccc62bed8128e4dc46a019228a2_cgraph.png" border="0" usemap="#anamespacebeliefprop_c_p_u_a64141ccc62bed8128e4dc46a019228a2_cgraph" alt=""/></div>
 <map name="anamespacebeliefprop_c_p_u_a64141ccc62bed8128e4dc46a019228a2_cgraph" id="anamespacebeliefprop_c_p_u_a64141ccc62bed8128e4dc46a019228a2_cgraph">
 <area shape="rect" title=" " alt="" coords="5,71,228,112"/>
-<area shape="rect" href="namespaceutil__functs.html#a9d24a6a516382fc3d84c9a2076d244f2" title="Inline function to check if data is aligned at x_val_data_start for SIMD loads/stores that require al..." alt="" coords="276,5,477,47"/>
-<area shape="rect" href="class_parallel_params.html#ad7c403dc0082fb66b8a75d40a56e679d" title="Get optimized parallel parameters for parallel processing kernel for kernel that is indexed as an arr..." alt="" coords="278,71,475,112"/>
-<area shape="rect" href="namespacebeliefprop_c_p_u.html#a405e657a4b5d238a28682ace4f9eb086" title=" " alt="" coords="277,136,476,177"/>
+<area shape="rect" href="namespacebeliefprop.html#a473a4cdee42051ee8890136a8c381990" title="Inline function to check if data is aligned at x_val_data_start for SIMD loads/stores that require al..." alt="" coords="276,5,475,47"/>
+<area shape="rect" href="class_parallel_params.html#ad7c403dc0082fb66b8a75d40a56e679d" title="Get optimized parallel parameters for parallel processing kernel for kernel that is indexed as an arr..." alt="" coords="277,71,474,112"/>
+<area shape="rect" href="namespacebeliefprop_c_p_u.html#a405e657a4b5d238a28682ace4f9eb086" title=" " alt="" coords="276,136,475,177"/>
 </map>
 </div>
 
@@ -1595,7 +1600,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00129">129</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00148">148</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -1699,7 +1704,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00085">85</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00104">104</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -1803,7 +1808,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00107">107</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00126">126</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -1907,7 +1912,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00129">129</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00148">148</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -2011,7 +2016,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00085">85</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00104">104</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -2115,7 +2120,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00107">107</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00126">126</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -2429,7 +2434,7 @@ template&lt;RunData_t T, RunDataVect_t U&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00642">642</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00653">653</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 
 </div>
 </div>
@@ -2533,7 +2538,7 @@ template&lt;RunData_t T, RunDataVect_t U, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00614">614</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00625">625</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 
 </div>
 </div>
@@ -2643,7 +2648,7 @@ template&lt;RunData_t T, unsigned int DISP_VALS, run_environment::AccSetting ACC
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00960">960</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00971">971</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 
 </div>
 </div>
@@ -2753,15 +2758,15 @@ template&lt;RunData_t T, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00568">568</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00579">579</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacebeliefprop_c_p_u_a955c3398c2d327e758da9a2c40a2a262_cgraph.png" border="0" usemap="#anamespacebeliefprop_c_p_u_a955c3398c2d327e758da9a2c40a2a262_cgraph" alt=""/></div>
 <map name="anamespacebeliefprop_c_p_u_a955c3398c2d327e758da9a2c40a2a262_cgraph" id="anamespacebeliefprop_c_p_u_a955c3398c2d327e758da9a2c40a2a262_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,271,87"/>
-<area shape="rect" href="namespaceutil__functs.html#a9d24a6a516382fc3d84c9a2076d244f2" title="Inline function to check if data is aligned at x_val_data_start for SIMD loads/stores that require al..." alt="" coords="319,5,520,47"/>
-<area shape="rect" href="class_parallel_params.html#ad7c403dc0082fb66b8a75d40a56e679d" title="Get optimized parallel parameters for parallel processing kernel for kernel that is indexed as an arr..." alt="" coords="321,71,518,112"/>
+<area shape="rect" href="namespacebeliefprop.html#a473a4cdee42051ee8890136a8c381990" title="Inline function to check if data is aligned at x_val_data_start for SIMD loads/stores that require al..." alt="" coords="319,5,517,47"/>
+<area shape="rect" href="class_parallel_params.html#ad7c403dc0082fb66b8a75d40a56e679d" title="Get optimized parallel parameters for parallel processing kernel for kernel that is indexed as an arr..." alt="" coords="319,71,517,112"/>
 </map>
 </div>
 
@@ -2873,7 +2878,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00063">63</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00082">82</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -2983,7 +2988,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00019">19</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00038">38</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -3093,7 +3098,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00041">41</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html#l00060">60</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x256_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX256TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -3203,7 +3208,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00063">63</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00082">82</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -3313,7 +3318,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00019">19</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00038">38</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -3423,7 +3428,7 @@ template&lt;unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00041">41</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html#l00060">60</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u___a_v_x512_template_sp_functs_8h_source.html">KernelBpStereoCPU_AVX512TemplateSpFuncts.h</a>.</p>
 
 </div>
 </div>
@@ -3755,15 +3760,15 @@ template&lt;RunData_t T, RunDataVect_t U, unsigned int DISP_VALS&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00670">670</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00681">681</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacebeliefprop_c_p_u_a3af66d30eb16713911cc5e8a6a7ef794_cgraph.png" border="0" usemap="#anamespacebeliefprop_c_p_u_a3af66d30eb16713911cc5e8a6a7ef794_cgraph" alt=""/></div>
 <map name="anamespacebeliefprop_c_p_u_a3af66d30eb16713911cc5e8a6a7ef794_cgraph" id="anamespacebeliefprop_c_p_u_a3af66d30eb16713911cc5e8a6a7ef794_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,315,87"/>
-<area shape="rect" href="namespaceutil__functs.html#a9d24a6a516382fc3d84c9a2076d244f2" title="Inline function to check if data is aligned at x_val_data_start for SIMD loads/stores that require al..." alt="" coords="363,5,564,47"/>
-<area shape="rect" href="class_parallel_params.html#ad7c403dc0082fb66b8a75d40a56e679d" title="Get optimized parallel parameters for parallel processing kernel for kernel that is indexed as an arr..." alt="" coords="365,71,562,112"/>
+<area shape="rect" href="namespacebeliefprop.html#a473a4cdee42051ee8890136a8c381990" title="Inline function to check if data is aligned at x_val_data_start for SIMD loads/stores that require al..." alt="" coords="363,5,561,47"/>
+<area shape="rect" href="class_parallel_params.html#ad7c403dc0082fb66b8a75d40a56e679d" title="Get optimized parallel parameters for parallel processing kernel for kernel that is indexed as an arr..." alt="" coords="363,71,561,112"/>
 </map>
 </div>
 
@@ -3809,7 +3814,7 @@ template&lt;RunDataVectProcess_t T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00418">418</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html#l00429">429</a> of file <a class="el" href="_kernel_bp_stereo_c_p_u_8h_source.html">KernelBpStereoCPU.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

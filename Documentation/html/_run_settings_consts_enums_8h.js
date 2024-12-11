@@ -22,6 +22,7 @@ var _run_settings_consts_enums_8h =
     ] ],
     [ "AccelerationString", "_run_settings_consts_enums_8h.html#a06320020557d9545768fb333d1276cf8", null ],
     [ "AccelerationString", "_run_settings_consts_enums_8h.html#a0a7505311f966a83b332d3fee2921848", null ],
+    [ "kAccelerationDescHeader", "_run_settings_consts_enums_8h.html#ad0f0355486540b6e9798b3349d48a1d9", null ],
     [ "kBytesAlignMemHeader", "_run_settings_consts_enums_8h.html#a1c871dad08fdced4234b98ec0cbef783", null ],
     [ "kCPUThreadsPinnedHeader", "_run_settings_consts_enums_8h.html#a00245c690fb6c14dafd1b1106d028140", null ],
     [ "kDataSizeToNameMap", "_run_settings_consts_enums_8h.html#ab15f9538874f71da40e07434e820a1d7", null ],

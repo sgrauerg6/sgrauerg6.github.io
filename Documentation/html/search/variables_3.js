@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_1078',['g',['../structrgb.html#a980df613256926531f12c62c4c0d0448',1,'rgb']]]
+  ['g_1082',['g',['../structbp__single__thread__imp_1_1rgb.html#a4aadeffc115b1a2036d5d347320d4bab',1,'bp_single_thread_imp::rgb']]]
 ];

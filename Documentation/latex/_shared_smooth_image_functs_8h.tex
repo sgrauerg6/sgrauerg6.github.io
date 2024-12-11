@@ -3,16 +3,15 @@
 {\ttfamily \#include \char`\"{}Run\+Imp/\+Utility\+Functs.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Run\+Eval/\+Run\+Type\+Constraints.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Bp\+Image\+Processing/\+Bp\+Image\+Constraints.\+h\char`\"{}}\newline
-Include dependency graph for Shared\+Smooth\+Image\+Functs.\+h\+:
-\nopagebreak
+{\ttfamily \#include \char`\"{}Shared\+Bp\+Util\+Functs.\+h\char`\"{}}\newline
+Include dependency graph for Shared\+Smooth\+Image\+Functs.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{_shared_smooth_image_functs_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,7 +22,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespacebeliefprop}{beliefprop}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Namespace for enums, constants, structures, and functions specific to belief propagation processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,3 +30,12 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactList}\small\item\em kernel to apply a horizontal filter on each pixel of the image in parallel the input image is stored as unsigned ints in the texture the output filtered image is returned as an array of floats \end{DoxyCompactList}\item 
 {\footnotesize template$<$Bp\+Im\+Data\+\_\+t T$>$ }\\\mbox{\hyperlink{_utility_functs_8h_a27d46e82335417157a0940d32a3fabfc}{ARCHITECTURE\+\_\+\+ADDITION}} void \mbox{\hyperlink{namespacebeliefprop_a527bc69220d92b30d3f74e8aaf182824}{beliefprop\+::\+Filter\+Image\+Vertical\+Process\+Pixel}} (unsigned int x\+\_\+val, unsigned int y\+\_\+val, const T $\ast$image\+\_\+to\+\_\+filter, float $\ast$filtered\+\_\+image, unsigned int width\+\_\+images, unsigned int height\+\_\+images, const float $\ast$image\+\_\+filter, unsigned int size\+\_\+filter)
 \begin{DoxyCompactList}\small\item\em kernel to apply a vertical filter on each pixel of the image in parallel the input image is stored as unsigned ints in the texture uint\+\_\+image\+\_\+pixels\+Texture the output filtered image is returned as an array of floats \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Scott Grauer-\/\+Gray 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}

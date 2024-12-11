@@ -85,69 +85,81 @@ $(document).ready(function(){initNavTree('_process_bp_c_u_d_a_8cpp.html',''); in
 <div class="title">ProcessBpCUDA.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Defines the functions to run the CUDA implementation of 2D Stereo estimation using BP.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &quot;<a class="el" href="_run_eval_consts_enums_8h_source.html">RunEval/RunEvalConstsEnums.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_utility_functs_8h_source.html">RunImp/UtilityFuncts.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bp_consts_enums_aliases_8h_source.html">BpRunProcessing/BpConstsEnumsAliases.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_process_bp_c_u_d_a_8h_source.html">ProcessBpCUDA.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="kernel_bp_stereo_8cu_source.html">kernelBpStereo.cu</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_kernel_bp_stereo_8cu_source.html">KernelBpStereo.cu</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ProcessBpCUDA.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_process_bp_c_u_d_a_8cpp__incl.png" border="0" usemap="#asrc_2beliefprop_2_bp_optimize_c_u_d_a_2_process_bp_c_u_d_a_8cpp" alt=""/></div>
 <map name="asrc_2beliefprop_2_bp_optimize_c_u_d_a_2_process_bp_c_u_d_a_8cpp" id="asrc_2beliefprop_2_bp_optimize_c_u_d_a_2_process_bp_c_u_d_a_8cpp">
-<area shape="rect" title=" " alt="" coords="322,5,518,47"/>
-<area shape="rect" title=" " alt="" coords="775,609,855,635"/>
-<area shape="rect" href="_run_eval_consts_enums_8h.html" title=" " alt="" coords="3035,527,3267,553"/>
-<area shape="rect" href="_utility_functs_8h.html" title=" " alt="" coords="43,266,213,293"/>
-<area shape="rect" href="_process_bp_c_u_d_a_8h.html" title=" " alt="" coords="1488,95,1627,121"/>
-<area shape="rect" href="kernel_bp_stereo_8cu.html" title=" " alt="" coords="350,95,490,121"/>
-<area shape="rect" title=" " alt="" coords="2180,609,2236,635"/>
-<area shape="rect" title=" " alt="" coords="1317,691,1414,717"/>
-<area shape="rect" href="_run_settings_consts_enums_8h.html" title=" " alt="" coords="2645,601,2875,643"/>
-<area shape="rect" title=" " alt="" coords="2735,691,2785,717"/>
-<area shape="rect" href="_run_type_constraints_8h.html" title=" " alt="" coords="242,527,462,553"/>
-<area shape="rect" title=" " alt="" coords="306,609,398,635"/>
-<area shape="rect" title=" " alt="" coords="1360,177,1483,203"/>
-<area shape="rect" title=" " alt="" coords="1507,177,1608,203"/>
-<area shape="rect" href="_process_bp_8h.html" title=" " alt="" coords="2134,177,2351,203"/>
-<area shape="rect" href="_bp_parallel_params_8h.html" title=" " alt="" coords="1572,266,1719,293"/>
-<area shape="rect" title=" " alt="" coords="2209,266,2277,293"/>
-<area shape="rect" title=" " alt="" coords="2825,445,2892,471"/>
-<area shape="rect" title=" " alt="" coords="2677,445,2801,471"/>
-<area shape="rect" title=" " alt="" coords="2301,266,2379,293"/>
-<area shape="rect" title=" " alt="" coords="2558,609,2621,635"/>
-<area shape="rect" title=" " alt="" coords="2403,266,2463,293"/>
-<area shape="rect" title=" " alt="" coords="2484,445,2551,471"/>
-<area shape="rect" href="_run_settings_8h.html" title=" " alt="" coords="1927,355,2169,382"/>
-<area shape="rect" href="_memory_management_8h.html" title=" " alt="" coords="1957,266,2185,293"/>
-<area shape="rect" href="_detailed_timings_8h.html" title=" " alt="" coords="2912,355,3157,382"/>
-<area shape="rect" href="_bp_consts_enums_aliases_8h.html" title=" " alt="" coords="389,437,587,479"/>
-<area shape="rect" href="_bp_evaluation_stereo_sets_8h.html" title=" " alt="" coords="764,259,959,300"/>
-<area shape="rect" href="_bp_settings_8h.html" title=" " alt="" coords="865,355,1085,382"/>
-<area shape="rect" href="_detailed_timing_bp_consts_8h.html" title=" " alt="" coords="2589,348,2787,389"/>
-<area shape="rect" href="_bp_run_settings_8h.html" title=" " alt="" coords="1170,445,1299,471"/>
-<area shape="rect" href="_bp_level_8h.html" title=" " alt="" coords="1794,266,1881,293"/>
-<area shape="rect" title=" " alt="" coords="1540,609,1615,635"/>
-<area shape="rect" title=" " alt="" coords="1476,445,1540,471"/>
-<area shape="rect" href="_run_data_8h.html" title=" " alt="" coords="1692,527,1839,553"/>
-<area shape="rect" href="_input_signature_8h.html" title=" " alt="" coords="1017,445,1146,471"/>
-<area shape="rect" href="_c_p_u_threads_pinned_to_socket_8h.html" title=" " alt="" coords="1941,445,2155,471"/>
-<area shape="rect" title=" " alt="" coords="1403,609,1461,635"/>
-<area shape="rect" title=" " alt="" coords="2359,609,2444,635"/>
-<area shape="rect" title=" " alt="" coords="1731,609,1799,635"/>
-<area shape="rect" title=" " alt="" coords="1201,527,1277,553"/>
-<area shape="rect" title=" " alt="" coords="1117,527,1176,553"/>
-<area shape="rect" title=" " alt="" coords="2015,527,2081,553"/>
-<area shape="rect" title=" " alt="" coords="2414,355,2463,382"/>
-<area shape="rect" title=" " alt="" coords="3018,445,3089,471"/>
-<area shape="rect" title=" " alt="" coords="1839,355,1902,382"/>
-<area shape="rect" href="_parallel_params_8h.html" title=" " alt="" coords="1665,437,1865,479"/>
-<area shape="rect" href="_shared_bp_processing_functs_8h.html" title=" " alt="" coords="289,169,551,211"/>
+<area shape="rect" title="Defines the functions to run the CUDA implementation of 2D Stereo estimation using BP." alt="" coords="2470,5,2666,47"/>
+<area shape="rect" title=" " alt="" coords="89,669,169,695"/>
+<area shape="rect" href="_run_eval_consts_enums_8h.html" title=" " alt="" coords="1971,587,2203,613"/>
+<area shape="rect" href="_utility_functs_8h.html" title=" " alt="" coords="3320,341,3491,367"/>
+<area shape="rect" href="_bp_consts_enums_aliases_8h.html" title=" " alt="" coords="3018,497,3217,539"/>
+<area shape="rect" href="_process_bp_c_u_d_a_8h.html" title=" " alt="" coords="1853,177,1992,203"/>
+<area shape="rect" href="_kernel_bp_stereo_8cu.html" title="This file defines the methods to perform belief propagation for disparity map estimation from stereo ..." alt="" coords="2692,95,2833,121"/>
+<area shape="rect" title=" " alt="" coords="2664,669,2720,695"/>
+<area shape="rect" title=" " alt="" coords="2527,751,2625,777"/>
+<area shape="rect" href="_run_settings_consts_enums_8h.html" title=" " alt="" coords="1625,661,1855,703"/>
+<area shape="rect" title=" " alt="" coords="885,751,936,777"/>
+<area shape="rect" href="_run_type_constraints_8h.html" title="Define constraints for data type in processing." alt="" coords="3169,587,3389,613"/>
+<area shape="rect" title=" " alt="" coords="3233,669,3325,695"/>
+<area shape="rect" title=" " alt="" coords="1861,259,1984,285"/>
+<area shape="rect" title=" " alt="" coords="1389,259,1491,285"/>
+<area shape="rect" href="_process_bp_8h.html" title=" " alt="" coords="1566,259,1783,285"/>
+<area shape="rect" href="_parallel_params_bp_8h.html" title=" " alt="" coords="1103,341,1249,367"/>
+<area shape="rect" title=" " alt="" coords="1274,341,1342,367"/>
+<area shape="rect" title=" " alt="" coords="195,587,261,613"/>
+<area shape="rect" title=" " alt="" coords="634,587,758,613"/>
+<area shape="rect" title=" " alt="" coords="1421,341,1499,367"/>
+<area shape="rect" title=" " alt="" coords="267,669,330,695"/>
+<area shape="rect" title=" " alt="" coords="1523,341,1583,367"/>
+<area shape="rect" title=" " alt="" coords="783,587,849,613"/>
+<area shape="rect" href="_run_settings_8h.html" title=" " alt="" coords="1577,423,1820,449"/>
+<area shape="rect" href="_memory_management_8h.html" title="Class for memory management with functions defined for standard memory allocation using CPU and can b..." alt="" coords="1659,341,1887,367"/>
+<area shape="rect" href="_detailed_timings_8h.html" title=" " alt="" coords="325,505,571,531"/>
+<area shape="rect" href="_bp_evaluation_stereo_sets_8h.html" title=" " alt="" coords="2675,333,2869,375"/>
+<area shape="rect" href="_bp_settings_8h.html" title=" " alt="" coords="2217,423,2437,449"/>
+<area shape="rect" href="_bp_run_utils_8h.html" title=" " alt="" coords="2584,505,2691,531"/>
+<area shape="rect" href="_detailed_timing_bp_consts_8h.html" title=" " alt="" coords="1071,497,1270,539"/>
+<area shape="rect" href="_bp_level_8h.html" title=" " alt="" coords="2563,341,2650,367"/>
+<area shape="rect" title=" " alt="" coords="1443,669,1517,695"/>
+<area shape="rect" title=" " alt="" coords="1293,505,1357,531"/>
+<area shape="rect" href="_run_data_8h.html" title="Class to store headers with data corresponding to current program run and evaluation." alt="" coords="873,587,1020,613"/>
+<area shape="rect" href="_input_signature_8h.html" title="Class for defining input signature for evaluation run that consists of evaluation set number,..." alt="" coords="2262,505,2391,531"/>
+<area shape="rect" href="_c_p_u_threads_pinned_to_socket_8h.html" title="Class for setting and retrieving setting of CPU threads pinned to socket." alt="" coords="1585,505,1799,531"/>
+<area shape="rect" title=" " alt="" coords="1541,669,1600,695"/>
+<area shape="rect" title=" " alt="" coords="620,669,705,695"/>
+<area shape="rect" title=" " alt="" coords="949,669,1017,695"/>
+<area shape="rect" title=" " alt="" coords="2411,587,2487,613"/>
+<area shape="rect" title=" " alt="" coords="2328,587,2387,613"/>
+<area shape="rect" title=" " alt="" coords="1627,587,1693,613"/>
+<area shape="rect" title=" " alt="" coords="1902,423,1951,449"/>
+<area shape="rect" title=" " alt="" coords="539,587,610,613"/>
+<area shape="rect" title=" " alt="" coords="2078,423,2141,449"/>
+<area shape="rect" href="_parallel_params_8h.html" title=" " alt="" coords="848,497,1048,539"/>
+<area shape="rect" href="_shared_bp_processing_functs_8h.html" title=" " alt="" coords="2826,169,3089,211"/>
+<area shape="rect" href="_shared_bp_util_functs_8h.html" title=" " alt="" coords="2995,259,3157,285"/>
 </map>
 </div>
 </div>
 <p><a href="_process_bp_c_u_d_a_8cpp_source.html">Go to the source code of this file.</a></p>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Defines the functions to run the CUDA implementation of 2D Stereo estimation using BP. </p>
+<p>Declares the host functions to run the CUDA implementation of Stereo estimation using BP.</p>
+<dl class="section author"><dt>Author</dt><dd>Scott Grauer-Gray</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="_process_bp_c_u_d_a_8cpp_source.html">ProcessBpCUDA.cpp</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
