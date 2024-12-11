@@ -1,0 +1,84 @@
+\hypertarget{misc_8h}{}\doxysection{src/beliefprop/\+Bp\+Single\+Thread\+CPU/misc.h File Reference}
+\label{misc_8h}\index{src/beliefprop/BpSingleThreadCPU/misc.h@{src/beliefprop/BpSingleThreadCPU/misc.h}}
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for misc.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{misc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{misc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbp__single__thread__imp_1_1rgb}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::rgb}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebp__single__thread__imp}{bp\+\_\+single\+\_\+thread\+\_\+imp}}
+\begin{DoxyCompactList}\small\item\em Class and structs in single-\/thread CPU bp implementation by Pedro Felzenwalb available at \href{https://cs.brown.edu/people/pfelzens/bp/index.html}{\texttt{ https\+://cs.\+brown.\+edu/people/pfelzens/bp/index.\+html}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+141592653589793
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{misc_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacebp__single__thread__imp_a3e12901d28ca1b41c7e88ec9993decfb}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::operator==}} (const rgb \&a, const rgb \&b)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespacebp__single__thread__imp_a86db79ff905b4d1b521cf4e64168c64a}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::abs}} (const T \&x)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \mbox{\hyperlink{namespacebp__single__thread__imp_ac6c47eec6737e46c147d67279f96ef2c}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::sign}} (const T \&x)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespacebp__single__thread__imp_a50998211a974ebd37ba215f57c986a4d}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::square}} (const T \&x)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespacebp__single__thread__imp_aaae8225ff8f25c760e53948a62fccc8b}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::bound}} (const T \&x, const T \&min, const T \&max)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{namespacebp__single__thread__imp_a27e1461a190dbec530433270ca35822f}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::check\+\_\+bound}} (const T \&x, const T \&min, const T \&max)
+\item 
+int \mbox{\hyperlink{namespacebp__single__thread__imp_a484d786ed225d0cbff279c01ac6556ef}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::vlib\+\_\+round}} (float x)
+\item 
+int \mbox{\hyperlink{namespacebp__single__thread__imp_addf238b743915b06c69d8f72af787d85}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::vlib\+\_\+round}} (double x)
+\item 
+double \mbox{\hyperlink{namespacebp__single__thread__imp_aa368da4dd6676c8ce4447b89f60acd66}{bp\+\_\+single\+\_\+thread\+\_\+imp\+::gaussian}} (double val, double sigma)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{misc.h@{misc.h}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!misc.h@{misc.h}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+141592653589793}
+
+
+
+Definition at line 27 of file misc.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{misc_8h_a65f85814a8290f9797005d3b28e7e5fc}\label{misc_8h_a65f85814a8290f9797005d3b28e7e5fc}} 
+\index{misc.h@{misc.h}!uchar@{uchar}}
+\index{uchar@{uchar}!misc.h@{misc.h}}
+\doxysubsubsection{\texorpdfstring{uchar}{uchar}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{misc_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar}}}
+
+
+
+Definition at line 30 of file misc.\+h.
+
