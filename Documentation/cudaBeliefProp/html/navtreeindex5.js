@@ -1,5 +1,14 @@
 var NAVTREEINDEX5 =
 {
+"structbeliefprop_1_1_bp_settings.html#a44f1607c7eebc42914e5f77c0dc4dbdc":[1,0,0,3,0],
+"structbeliefprop_1_1_bp_settings.html#a4e4ec3770256b7f6ff96436bfbce6892":[1,0,0,3,3],
+"structbeliefprop_1_1_bp_settings.html#a5c166b015f4ec4d44dd94d3f3328e323":[1,0,0,3,1],
+"structbeliefprop_1_1_bp_settings.html#a6224f20a238fdffe36aa1cb3cb14d6b7":[1,0,0,3,5],
+"structbeliefprop_1_1_bp_settings.html#a8009f4bf04e84f8d3f8b06c621d9519c":[1,0,0,3,4],
+"structbeliefprop_1_1_bp_settings.html#a8ad64f0e3691fdf79db0ec60f4ac0643":[1,0,0,3,6],
+"structbeliefprop_1_1_bp_settings.html#ad1d8c6facc9cc76d78305f14d303e5b2":[1,0,0,3,2],
+"structbeliefprop_1_1_bp_stereo_set.html":[1,0,0,0],
+"structbeliefprop_1_1_bp_stereo_set.html#a3dbcbee32c8d4c3aadf6733bdcd4a20f":[1,0,0,0,1],
 "structbeliefprop_1_1_bp_stereo_set.html#ab60c3f32c0f180c2a9f911dc372c833b":[1,0,0,0,2],
 "structbeliefprop_1_1_bp_stereo_set.html#abcc731b205339befe54ebdc1bb4c97e7":[1,0,0,0,0],
 "structbeliefprop_1_1_disparity_map_evaluation_params.html":[1,0,0,1],

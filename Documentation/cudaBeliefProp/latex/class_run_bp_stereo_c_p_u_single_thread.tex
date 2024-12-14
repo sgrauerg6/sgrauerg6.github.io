@@ -30,7 +30,7 @@ Collaboration diagram for Run\+Bp\+Stereo\+CPUSingle\+Thread$<$ T, DISP\+\_\+\+V
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::optional$<$ \mbox{\hyperlink{structbeliefprop_1_1_process_stereo_set_output}{beliefprop\+::\+Process\+Stereo\+Set\+Output}} $>$ \mbox{\hyperlink{class_run_bp_stereo_c_p_u_single_thread_adfba99c1f653fe037d781d3026de00a6}{operator()}} (const std\+::array$<$ std\+::string, 2 $>$ \&ref\+\_\+test\+\_\+image\+\_\+path, const \mbox{\hyperlink{structbeliefprop_1_1_bp_settings}{beliefprop\+::\+Bp\+Settings}} \&alg\+\_\+settings, const \mbox{\hyperlink{class_parallel_params}{Parallel\+Params}} \&parallel\+\_\+params) const override
+std\+::optional$<$ \mbox{\hyperlink{struct_process_stereo_set_output}{Process\+Stereo\+Set\+Output}} $>$ \mbox{\hyperlink{class_run_bp_stereo_c_p_u_single_thread_a2f68dcb344642cd76aec40662737a972}{operator()}} (const std\+::array$<$ std\+::string, 2 $>$ \&ref\+\_\+test\+\_\+image\+\_\+path, const \mbox{\hyperlink{structbeliefprop_1_1_bp_settings}{beliefprop\+::\+Bp\+Settings}} \&alg\+\_\+settings, const \mbox{\hyperlink{class_parallel_params}{Parallel\+Params}} \&parallel\+\_\+params) const override
 \begin{DoxyCompactList}\small\item\em Pure virtual operator() overload that must be defined in child class. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_run_bp_stereo_c_p_u_single_thread_a3e525b7b34e9e325b86960b1c2840717}{Bp\+Run\+Description}} () const override
 \begin{DoxyCompactList}\small\item\em Pure virtual function to return run description corresponding to target acceleration. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -81,12 +81,12 @@ Implements \mbox{\hyperlink{class_run_bp_on_stereo_set_a6c70f066d355522c0c01f896
 
 Definition at line 71 of file stereo.\+h.
 
-\mbox{\Hypertarget{class_run_bp_stereo_c_p_u_single_thread_adfba99c1f653fe037d781d3026de00a6}\label{class_run_bp_stereo_c_p_u_single_thread_adfba99c1f653fe037d781d3026de00a6}} 
+\mbox{\Hypertarget{class_run_bp_stereo_c_p_u_single_thread_a2f68dcb344642cd76aec40662737a972}\label{class_run_bp_stereo_c_p_u_single_thread_a2f68dcb344642cd76aec40662737a972}} 
 \index{RunBpStereoCPUSingleThread$<$ T, DISP\_VALS, ACCELERATION $>$@{RunBpStereoCPUSingleThread$<$ T, DISP\_VALS, ACCELERATION $>$}!operator()@{operator()}}
 \index{operator()@{operator()}!RunBpStereoCPUSingleThread$<$ T, DISP\_VALS, ACCELERATION $>$@{RunBpStereoCPUSingleThread$<$ T, DISP\_VALS, ACCELERATION $>$}}
 \doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
 {\footnotesize\ttfamily template$<$typename T , unsigned int DISP\+\_\+\+VALS, run\+\_\+environment\+::\+Acc\+Setting ACCELERATION$>$ \\
-std\+::optional$<$ \mbox{\hyperlink{structbeliefprop_1_1_process_stereo_set_output}{beliefprop\+::\+Process\+Stereo\+Set\+Output}} $>$ \mbox{\hyperlink{class_run_bp_stereo_c_p_u_single_thread}{Run\+Bp\+Stereo\+CPUSingle\+Thread}}$<$ T, DISP\+\_\+\+VALS, ACCELERATION $>$\+::operator() (\begin{DoxyParamCaption}\item[{const std\+::array$<$ std\+::string, 2 $>$ \&}]{ref\+\_\+test\+\_\+image\+\_\+path,  }\item[{const \mbox{\hyperlink{structbeliefprop_1_1_bp_settings}{beliefprop\+::\+Bp\+Settings}} \&}]{alg\+\_\+settings,  }\item[{const \mbox{\hyperlink{class_parallel_params}{Parallel\+Params}} \&}]{parallel\+\_\+params }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+std\+::optional$<$ \mbox{\hyperlink{struct_process_stereo_set_output}{Process\+Stereo\+Set\+Output}} $>$ \mbox{\hyperlink{class_run_bp_stereo_c_p_u_single_thread}{Run\+Bp\+Stereo\+CPUSingle\+Thread}}$<$ T, DISP\+\_\+\+VALS, ACCELERATION $>$\+::operator() (\begin{DoxyParamCaption}\item[{const std\+::array$<$ std\+::string, 2 $>$ \&}]{ref\+\_\+test\+\_\+image\+\_\+path,  }\item[{const \mbox{\hyperlink{structbeliefprop_1_1_bp_settings}{beliefprop\+::\+Bp\+Settings}} \&}]{alg\+\_\+settings,  }\item[{const \mbox{\hyperlink{class_parallel_params}{Parallel\+Params}} \&}]{parallel\+\_\+params }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -102,11 +102,11 @@ Pure virtual operator() overload that must be defined in child class.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::optional$<$beliefprop\+::\+Process\+Stereo\+Set\+Output$>$ 
+std\+::optional$<$\+Process\+Stereo\+Set\+Output$>$ 
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_run_bp_on_stereo_set_a1efb0270db093a34351fb21402cfaf2c}{Run\+Bp\+On\+Stereo\+Set$<$ T, DISP\+\_\+\+VALS, ACCELERATION $>$}}.
+Implements \mbox{\hyperlink{class_run_bp_on_stereo_set_a6fcf78b3ea23a566300e0413a1cc0002}{Run\+Bp\+On\+Stereo\+Set$<$ T, DISP\+\_\+\+VALS, ACCELERATION $>$}}.
 
 
 

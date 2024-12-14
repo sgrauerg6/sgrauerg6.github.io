@@ -38,9 +38,9 @@ Collaboration diagram for Disparity\+Map$<$ T $>$\+:\nopagebreak
 \item 
 \mbox{\hyperlink{class_disparity_map_af71c675246800ef43acaf1a63c58d311}{Disparity\+Map}} (const std\+::string \&file\+\_\+path\+\_\+disparity\+\_\+map, unsigned int disparity\+\_\+map\+\_\+vals\+\_\+scale=1)
 \item 
-\mbox{\hyperlink{class_disparity_map_evaluation}{Disparity\+Map\+Evaluation}} \mbox{\hyperlink{class_disparity_map_aa5f6cf6ac6bd63788e9f4e24740ed755}{Output\+Comparison}} (const \mbox{\hyperlink{class_disparity_map}{Disparity\+Map}} \&disparity\+\_\+map\+\_\+to\+\_\+compare, const \mbox{\hyperlink{structbeliefprop_1_1_disparity_map_evaluation_params}{beliefprop\+::\+Disparity\+Map\+Evaluation\+Params}} \&evaluation\+\_\+parameters) const
+\mbox{\hyperlink{class_disparity_map_evaluation}{Disparity\+Map\+Evaluation}} \mbox{\hyperlink{class_disparity_map_a3428722b1a8edcf5261aa51cc5899ba4}{Output\+Comparison}} (const \mbox{\hyperlink{class_disparity_map}{Disparity\+Map}} \&disparity\+\_\+map\+\_\+to\+\_\+compare, const \mbox{\hyperlink{structbeliefprop_1_1_disparity_map_evaluation_params}{beliefprop\+::\+Disparity\+Map\+Evaluation\+Params}} \&evaluation\+\_\+parameters) const
 \item 
-void \mbox{\hyperlink{class_disparity_map_ab9e96c456b2835027f55625b5d1afe30}{Save\+Disparity\+Map}} (const std\+::string \&disparity\+\_\+map\+\_\+file\+\_\+path, unsigned int scale\+\_\+factor=1) const
+void \mbox{\hyperlink{class_disparity_map_afe3e01cf3a3f2084198fc4bc1be7db96}{Save\+Disparity\+Map}} (const std\+::string \&disparity\+\_\+map\+\_\+file\+\_\+path, unsigned int scale\+\_\+factor=1) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -117,40 +117,40 @@ Definition at line 61 of file Disparity\+Map.\+h.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_disparity_map_aa5f6cf6ac6bd63788e9f4e24740ed755}\label{class_disparity_map_aa5f6cf6ac6bd63788e9f4e24740ed755}} 
+\mbox{\Hypertarget{class_disparity_map_a3428722b1a8edcf5261aa51cc5899ba4}\label{class_disparity_map_a3428722b1a8edcf5261aa51cc5899ba4}} 
 \index{DisparityMap$<$ T $>$@{DisparityMap$<$ T $>$}!OutputComparison@{OutputComparison}}
 \index{OutputComparison@{OutputComparison}!DisparityMap$<$ T $>$@{DisparityMap$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{OutputComparison()}{OutputComparison()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\mbox{\hyperlink{class_disparity_map_evaluation}{Disparity\+Map\+Evaluation}} \mbox{\hyperlink{class_disparity_map}{Disparity\+Map}}$<$ T $>$\+::Output\+Comparison (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_disparity_map}{Disparity\+Map}}$<$ T $>$ \&}]{disparity\+\_\+map\+\_\+to\+\_\+compare,  }\item[{const \mbox{\hyperlink{structbeliefprop_1_1_disparity_map_evaluation_params}{beliefprop\+::\+Disparity\+Map\+Evaluation\+Params}} \&}]{evaluation\+\_\+parameters }\end{DoxyParamCaption}) const}
+requires std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$ \mbox{\hyperlink{class_disparity_map_evaluation}{Disparity\+Map\+Evaluation}} \mbox{\hyperlink{class_disparity_map}{Disparity\+Map}}$<$ T $>$\+::Output\+Comparison (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_disparity_map}{Disparity\+Map}}$<$ T $>$ \&}]{disparity\+\_\+map\+\_\+to\+\_\+compare,  }\item[{const \mbox{\hyperlink{structbeliefprop_1_1_disparity_map_evaluation_params}{beliefprop\+::\+Disparity\+Map\+Evaluation\+Params}} \&}]{evaluation\+\_\+parameters }\end{DoxyParamCaption}) const}
 
 
 
-Definition at line 47 of file Disparity\+Map.\+cpp.
+Definition at line 49 of file Disparity\+Map.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_disparity_map_aa5f6cf6ac6bd63788e9f4e24740ed755_cgraph}
+\includegraphics[width=350pt]{class_disparity_map_a3428722b1a8edcf5261aa51cc5899ba4_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_disparity_map_ab9e96c456b2835027f55625b5d1afe30}\label{class_disparity_map_ab9e96c456b2835027f55625b5d1afe30}} 
+\mbox{\Hypertarget{class_disparity_map_afe3e01cf3a3f2084198fc4bc1be7db96}\label{class_disparity_map_afe3e01cf3a3f2084198fc4bc1be7db96}} 
 \index{DisparityMap$<$ T $>$@{DisparityMap$<$ T $>$}!SaveDisparityMap@{SaveDisparityMap}}
 \index{SaveDisparityMap@{SaveDisparityMap}!DisparityMap$<$ T $>$@{DisparityMap$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{SaveDisparityMap()}{SaveDisparityMap()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-void \mbox{\hyperlink{class_disparity_map}{Disparity\+Map}}$<$ T $>$\+::Save\+Disparity\+Map (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{disparity\+\_\+map\+\_\+file\+\_\+path,  }\item[{unsigned int}]{scale\+\_\+factor = {\ttfamily 1} }\end{DoxyParamCaption}) const}
+requires std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$ void \mbox{\hyperlink{class_disparity_map}{Disparity\+Map}}$<$ T $>$\+::Save\+Disparity\+Map (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{disparity\+\_\+map\+\_\+file\+\_\+path,  }\item[{unsigned int}]{scale\+\_\+factor = {\ttfamily 1} }\end{DoxyParamCaption}) const}
 
 
 
-Definition at line 30 of file Disparity\+Map.\+cpp.
+Definition at line 31 of file Disparity\+Map.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_disparity_map_ab9e96c456b2835027f55625b5d1afe30_cgraph}
+\includegraphics[width=350pt]{class_disparity_map_afe3e01cf3a3f2084198fc4bc1be7db96_cgraph}
 \end{center}
 \end{figure}
 

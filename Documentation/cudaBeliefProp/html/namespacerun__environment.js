@@ -33,5 +33,9 @@ var namespacerun__environment =
     [ "kNumCPUThreadsHeader", "namespacerun__environment.html#a9f9b4e6013a69f63118b7d6bd8b6dd1e", null ],
     [ "kNumDataAlignWidthHeader", "namespacerun__environment.html#a0f90572394f855a71598506533005800", null ],
     [ "kOmpPlacesHeader", "namespacerun__environment.html#a2f12e6214db0993b83063ce3ee059789", null ],
-    [ "kOmpProcBindHeader", "namespacerun__environment.html#a96a0152e29108e93871a640650a65596", null ]
+    [ "kOmpProcBindHeader", "namespacerun__environment.html#a96a0152e29108e93871a640650a65596", null ],
+    [ "kOptPParmsSettingToDesc", "namespacerun__environment.html#a7203df709834249d205e9e2fc1f284af", null ],
+    [ "kPParamsPerKernelSettingHeader", "namespacerun__environment.html#ac751be19deff1e638b9b4b910d240586", null ],
+    [ "kPParamsSameEveryKernelDesc", "namespacerun__environment.html#a6c2026450cbd095d012b6f5fc8f7e26a", null ],
+    [ "kPParamsSetEachKernelDesc", "namespacerun__environment.html#ad519e318728462fddb1a483f3e208498", null ]
 ];

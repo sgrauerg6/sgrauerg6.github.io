@@ -29,5 +29,9 @@ var _run_settings_consts_enums_8h =
     [ "kNumCPUThreadsHeader", "_run_settings_consts_enums_8h.html#a9f9b4e6013a69f63118b7d6bd8b6dd1e", null ],
     [ "kNumDataAlignWidthHeader", "_run_settings_consts_enums_8h.html#a0f90572394f855a71598506533005800", null ],
     [ "kOmpPlacesHeader", "_run_settings_consts_enums_8h.html#a2f12e6214db0993b83063ce3ee059789", null ],
-    [ "kOmpProcBindHeader", "_run_settings_consts_enums_8h.html#a96a0152e29108e93871a640650a65596", null ]
+    [ "kOmpProcBindHeader", "_run_settings_consts_enums_8h.html#a96a0152e29108e93871a640650a65596", null ],
+    [ "kOptPParmsSettingToDesc", "_run_settings_consts_enums_8h.html#a7203df709834249d205e9e2fc1f284af", null ],
+    [ "kPParamsPerKernelSettingHeader", "_run_settings_consts_enums_8h.html#ac751be19deff1e638b9b4b910d240586", null ],
+    [ "kPParamsSameEveryKernelDesc", "_run_settings_consts_enums_8h.html#a6c2026450cbd095d012b6f5fc8f7e26a", null ],
+    [ "kPParamsSetEachKernelDesc", "_run_settings_consts_enums_8h.html#ad519e318728462fddb1a483f3e208498", null ]
 ];
