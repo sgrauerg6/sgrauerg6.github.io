@@ -489,15 +489,32 @@ href="http://www.iapr.org/members/newsletter/Newsletter09-02/index_files/Page865
 						  <a href="https://docs.google.com/spreadsheets/d/1j_JWKx9K2puHnWB0qRaxP3TyEkMDaoNpiLhUHleev-w/edit?usp=sharing"><li><small><b>Spreadsheet with detailed results</b></a></small></li>
 					  </ul>
                   </ul>
-					<li><b>Follow-up 'paper': <a href="OptimizingGlobalStereoMatchingOnNVIDIAGPUsAndCPUs.pdf">"Optimizing Global Stereo Matching on NVIDIA GPUs and CPUs"</a></b></li>
+					<li><b>Follow-up 'paper' (2019): <a href="OptimizingGlobalStereoMatching.pdf">"Optimizing Global Stereo Matching on NVIDIA GPUs and CPUs"</a></b></li>
 					 <ul>
 						 <li><small>Describes additional CUDA code optimizations with evaluation on multiple GPUs including Tesla V100.</small></li>
 						 <li><small>Introduces parallel CPU implementation using OpenMP, SIMD instructions, and the same optimizations as the CUDA code, with evaluation on multiple CPUs.</small></li>
 						 <li><small>TLDR #1: Was able to get a speedup of over 2x on many tests with no loss of accuracy by (1) getting rid of many cudaMalloc()/cudaFree() calls, (2) using 16-bit half precision data rather than 32-bit floats, and (3) improving data alignment.</small></li>
 						 <li><small>TLDR #2: Parallel/optimized CPU implementation much faster than initial non-parallel code, but optimized CUDA implementation on Tesla V100 is still 1.9x-4.2x faster than optimized CPU implementation on 24-core Xeon CPU.</small></li>
 					</ul>
-                </ul>
               </li>
+              <li><b>Second follow-up 'paper' (2025): <a href="OptimizedBpGpuVsCpu_Jan2025.pdf">"Parallel Stereo Matching on NVIDIA GPUs and CPUs"</a></b></li>
+              <ul>
+                <li><small><b>Processors benchmarked:</b></small>
+                  <ul>
+                  <li><small>NVIDIA GPUs: H100, A100, RTX 3090 Ti</small></li>
+                  <li><small>x86 CPUs: AMD Genoa, Intel Emerald Rapids</small></li>
+                  <li><small>ARM CPUs: Amazon Graviton4, Azure Cobalt, NVIDIA Grace</small></li>
+                  </ul>
+                <li><small>Abstract: Parallel processing is a common way to speed up many computer vision algorithms including stereo matching.  This work
+                  looks at optimized parallel implementations of belief propagation for stereo processing on NVIDIA GPU and x86/ARM
+                  CPU architectures and shows runtime comparisons across multiple GPU and CPU processors on a variety of input stereo
+                  sets.  The work goes on to present and show results of retrieving an optimized parallel configuration for each input
+                  stereo set, speedups/slowdowns when using 16-bit floats and 64-bit doubles compared to 32-bit floats, and speedups
+                  when using templated disparity counts that allow the iteration counts of loops that iterate through possible disparities
+                  to be known at compile time.
+             </ul>
+                   </ul>
+                 </li>
             </ul>
             <br>
             <font size="+2"><b> IEEE Disclamer</b></font><br>
