@@ -130,6 +130,85 @@ Grauer-Gray&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s
           </td>
           <td style="text-align: left; background-color: rgb(204, 255,
             255);">
+			  <b><h2><span style="color: rgb(0, 153, 0);">Bicycle food delivery Jersey City area</span></h2></b>
+			  <ul>
+				  <li><a href="https://us.brompton.com/catalogue/bikes/brompton/m2l-signal-orange-2-speed">2-speed Brompton folding bike</a> used for deliveries</li>
+				  <li>Delivered for Grubhub, Uber Eats, DoorDash, and Hungry Panda
+				  </ul>
+<img src="DeliveryMaps/delivery_map_0.png" alt="img" id="img" height="640">
+<br>
+<button id="prevButton" onclick="prevDeliveryMap()">
+  Previous
+</button>
+
+<button id="pausePlayButton" onclick="pausePlay()">
+  Pause
+</button>
+
+<button id="nextButton" onclick="nextDeliveryMap()">
+    Next
+</button>
+
+<script>
+  const img = document.getElementById("img");
+  const playPauseBtn = document.getElementById("pausePlayButton");
+  const maxIndex = 99;
+  let index = 0;
+  let play = true;
+  let imagePathStart = "DeliveryMaps/delivery_map_";
+  let imagePathEnd = ".png";
+  let travel;
+
+  const startPlay = () => {
+    travel = setInterval(() => {
+      ++index;
+      if (index < 0 || index > maxIndex) index = 0;
+      img.src = imagePathStart;
+      img.src += index.toString();
+      img.src += imagePathEnd;
+    }, 1000);
+  };
+
+  const pausePlay = () => {
+    if (play) {
+      playPauseBtn.innerHTML = "Play";
+      play = false;
+      clearInterval(travel);
+    }
+    else {
+      play = true;
+      playPauseBtn.innerHTML = "Pause";
+      startPlay();
+    }
+  }
+
+  const prevDeliveryMap = () => {
+    index--;
+    if (index < 0) index = maxIndex;
+    img.src = imagePathStart;
+    img.src += index.toString();
+    img.src += imagePathEnd;
+    if (play) {
+      pausePlay();
+    }
+  }
+
+  const nextDeliveryMap = () => {
+    index++;
+    if (index > maxIndex) index = 0;
+    img.src = imagePathStart;
+    img.src += index.toString();
+    img.src += imagePathEnd;
+    if (play) {
+      pausePlay();
+    }
+  }
+
+  startPlay();
+</script>
+<br>
+<br>
+<br>
 			  <b><h2><span style="color: rgb(0, 153, 0);">Bicycle food delivery in/around Philadelphia</span></h2></b>
 			  <ul>
 				  <li><a href="https://us.brompton.com/catalogue/bikes/brompton/m2l-signal-orange-2-speed">2-speed Brompton folding bike</a> used for Center City deliveries</li>
