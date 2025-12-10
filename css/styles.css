@@ -1,0 +1,36 @@
+.main_bg_color {
+    background-color: rgb(200, 255, 255);
+}
+
+.top_table {
+    background-color: rgb(255, 255, 204);
+}
+
+.top_table_cell {
+    vertical-align: top;
+    text-align: right;
+    background-color: rgb(255, 255, 0);
+}
+
+.second_block_left {
+    vertical-align: top;
+    background-color: rgb(51, 204, 255);
+}
+
+.section_separator {
+    vertical-align: top;
+    background-color: rgb(0, 0, 0);
+}
+
+.main_region_block {
+    vertical-align: top;
+    text-align: left;
+}
+
+.header_color {
+    color: rgb(0, 153, 0);
+}
+
+.secondary_color {
+    color: rgb(0, 0, 0);
+}
