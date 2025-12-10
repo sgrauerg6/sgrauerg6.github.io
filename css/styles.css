@@ -54,3 +54,7 @@
 ul li {
     margin-top: 3px;
 }
+
+.li_small li {
+  font-size: 12px;
+}
