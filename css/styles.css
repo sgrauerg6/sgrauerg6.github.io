@@ -40,7 +40,7 @@
 }
 
 .header_size {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .secondary_color {
@@ -48,13 +48,23 @@
 }
 
 .bold-text {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 ul li {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
 .li_small li {
   font-size: 12px;
+}
+
+.small_text {
+  font-size: 12px;
+}
+
+.name_style {
+  font-size: 46px;
+  color: rgb(0, 0, 153);
+  font-weight: bold;
 }
