@@ -18,6 +18,7 @@
 .left_table {
     vertical-align: top;
     background-color: rgb(255, 255, 204);
+    font-weight: bold;
 }
 
 .second_block_left {
@@ -51,7 +52,7 @@
     color: rgb(0, 0, 0);
 }
 
-.bold-text {
+.bold_text {
   font-weight: bold;
 }
 
