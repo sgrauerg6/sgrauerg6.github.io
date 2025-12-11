@@ -3,7 +3,7 @@ const playPauseBtn = document.getElementById("pausePlayButton");
 const maxIndex = 99;
 let index = 0;
 let play = true;
-let imagePathStart = "DeliveryMaps/delivery_map_";
+let imagePathStart = "JerseyCityDelivery/delivery_map_";
 let imagePathEnd = ".png";
 let travel;
 
