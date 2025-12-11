@@ -1,17 +1,41 @@
 const img = document.getElementById("img");
 const playPauseBtn = document.getElementById("pausePlayButton");
-const maxIndex = 99;
+const locationBtns = [document.getElementById("JerseyCity"), document.getElementById("Manayunk"), document.getElementById("CenterCity")];
+const maxIndex = [99, 58, 45];
 let index = 0;
 let play = true;
-let imagePathStart = "JerseyCityDelivery/delivery_map_";
+const imagePathStart = ["JerseyCityDelivery/delivery_map_", "ManayunkDelivery/ManayunkDelivery_", "CenterCityDelivery/CenterCityDelivery_"];
 let imagePathEnd = ".png";
+let delivery_location = 0;
 let travel;
+
+function changeDeliveryLocation(location) {
+    clearInterval(travel);
+    delivery_location = location;
+    index = 0;
+    locationBtns[0].style.backgroundColor = "lightblue";
+    locationBtns[1].style.backgroundColor = "lightblue";
+    locationBtns[2].style.backgroundColor = "lightblue";
+    locationBtns[0].style.color = "black";
+    locationBtns[1].style.color = "black";
+    locationBtns[2].style.color = "black";
+    locationBtns[delivery_location].style.backgroundColor = "green";
+    locationBtns[delivery_location].style.color = "white";
+    if (play) {
+      startPlay();
+    }
+    else {
+      img.src = imagePathStart[delivery_location];
+      img.src += index.toString();
+      img.src += imagePathEnd;
+    }
+};
 
 const startPlay = () => {
   travel = setInterval(() => {
     ++index;
-    if (index < 0 || index > maxIndex) index = 0;
-    img.src = imagePathStart;
+    if (index < 0 || index > maxIndex[delivery_location]) index = 0;
+    img.src = imagePathStart[delivery_location];
     img.src += index.toString();
     img.src += imagePathEnd;
   }, 1000);
@@ -32,8 +56,8 @@ const pausePlay = () => {
 
 const prevDeliveryMap = () => {
   index--;
-  if (index < 0) index = maxIndex;
-  img.src = imagePathStart;
+  if (index < 0) index = maxIndex[delivery_location];
+  img.src = imagePathStart[delivery_location];
   img.src += index.toString();
   img.src += imagePathEnd;
   if (play) {
@@ -43,8 +67,8 @@ const prevDeliveryMap = () => {
 
 const nextDeliveryMap = () => {
   index++;
-  if (index > maxIndex) index = 0;
-  img.src = imagePathStart;
+  if (index > maxIndex[delivery_location]) index = 0;
+  img.src = imagePathStart[delivery_location];
   img.src += index.toString();
   img.src += imagePathEnd;
   if (play) {
@@ -53,3 +77,4 @@ const nextDeliveryMap = () => {
 }
 
 startPlay();
+changeDeliveryLocation(0)
