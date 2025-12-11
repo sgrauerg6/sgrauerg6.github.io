@@ -1,47 +1,72 @@
 .main_bg_color {
-    background-color: rgb(200, 255, 255);
+  background-color: rgb(200, 255, 255);
 }
 
 .top_table {
-    width: 90%;
+  width: 90%;
 }
 
+/* top bar background color */
 .top_table_bg_color {
-    background-color: rgb(255, 255, 0);
+  background-color: rgb(255, 255, 0);
 }
 
+/* top bar cell style */
 .top_table_cell {
-    vertical-align: top;
-    text-align: right;
+  vertical-align: top;
+  text-align: right;
 }
 
+/* left navigation bar style */
 .left_table {
-    vertical-align: top;
-    background-color: rgb(255, 255, 204);
-    font-weight: bold;
+  vertical-align: top;
+  background-color: rgb(255, 255, 204);
+  font-weight: bold;
+  color: rgb(0, 127, 0);
+  font-size: 22px;
+}
+
+/* Link styles in left navigation bar */
+.left_table a:link {
+  text-decoration: none;
+  color: rgb(0, 0, 255);
+}
+  
+.left_table a:visited {
+  color: rgb(0, 0, 255);
+}
+
+.left_table a:hover {
+  text-decoration: underline;
+  color: rgb(0, 127, 0);
+}
+
+.left_table a:active {
+  text-decoration: underline;
+  color: rgb(255, 0, 0);
 }
 
 .second_block_left {
-    vertical-align: top;
-    background-color: rgb(51, 204, 255);
+  vertical-align: top;
+  background-color: rgb(51, 204, 255);
 }
 
 .section_separator {
-    vertical-align: top;
-    background-color: rgb(0, 0, 0);
+  vertical-align: top;
+  background-color: rgb(0, 0, 0);
 }
 
 .main_region_block {
-    vertical-align: top;
-    text-align: left;
+  vertical-align: top;
+  text-align: left;
 }
 
 .header_color {
-    color: rgb(0, 153, 0);
+  color: rgb(0, 127, 0);
 }
 
 .header_size {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .secondary_heading_size {
