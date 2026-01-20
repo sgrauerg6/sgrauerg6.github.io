@@ -1,4 +1,4 @@
-const img = document.getElementById("img");
+const img = document.getElementById("deliveryDayImg");
 const playPauseBtn = document.getElementById("pausePlayButton");
 const locationBtns = [document.getElementById("JerseyCity"), document.getElementById("Manayunk"), document.getElementById("CenterCity")];
 const maxIndex = [99, 58, 45];

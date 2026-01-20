@@ -82,61 +82,36 @@
           </td>
           <td class="main_bg_color main_region_block"><br>
           </td>
-          <td class="main_bg_color main_region_block"><span class="header_color bold_text">
-            Masters graduate (and PHD dropout) from the <a href="http://www.cis.udel.edu/">
-            Computer and Information Sciences</a> at the <a href="http://www.udel.edu/">University
-            of Delaware</a>. First worked with <a href="http://www.cis.udel.edu/%7Echandra/">
-            Dr. Chandra Kambhamettu</a> in the <a href="https://www.eecis.udel.edu/wiki/vims/">
-            Video/Image Modeling and Synthesis Lab</a> (VIMS); later changed advisors and worked with <a
-            href="https://www.eecis.udel.edu/~cavazos">Dr. John Cavazos</a> in 
-            <a href="http://cavazos-lab.github.io/">his lab</a> on high-performance computing.<br>
-		    	  <br>
-			      Worked at <a href="http://www.faro.com/en-us/home">Faro Technologies</a> on the 
-            <a href="https://www.faro.com/products/3d-manufacturing/faro-laser-tracker">Laser Tracker</a>
-            from December 2015 to February 2019 (See videos <a href="https://www.youtube.com/watch?v=lvbMai23vAQ">here</a> 
-            and <a href="https://www.youtube.com/watch?v=_kLzams-yaU">here</a> for more info about Faro Laser Tracker).<br>
-			      <br>
-	          Worked at <a href="https://www.canfieldsci.com/">Canfield Scientific</a>
-            on software for medical devices such as the 
-            <a href="https://www.canfieldsci.com/imaging-systems/vectra-wb360-imaging-system/">Vectra WB360</a> 
-            and <a href="https://www.canfieldsci.com/imaging-systems/intellistudio-derm/">IntelliStudio</a> 
-            from October 2019 to October 2024 (See brochures 
-            <a href="https://www.canfieldsci.com/common/docs/products/11/brochures/VECTRAWB360brochure.pdf">here</a> 
-            and <a href="https://www.canfieldsci.com/common/docs/products/55/brochures/IS3-DermXBrochure.pdf">here</a> 
-            for more info about the devices).
+          <td class="main_bg_color main_region_block">
+            <span class="header_color bold_text">
+              <div id="gradSchool"></div>
+              <br>
+              <div id="work1"></div>
+              <br>
+              <div id="work2"></div>     
             </span>
             <br>
+            <div id="indexPagePic"></div>
             <br>
-            <img style="width: 263px; height: 179px;" alt="picOfMe"
-              src="Scott.jpg"><br><br>
-                <span class="header_color header_size bold_text">Contact</span>
+            <span class="header_color header_size bold_text">Contact</span>
             <ul>
-              <li><span class="secondary_color bold_text">Email: <a
-                href="mailto:sgrauerg@gmail.com">sgrauerg@gmail.com</a></span></li>
-	            <li><span class="secondary_color bold_text">Resume: <a
-                href="https://sgrauerg6.github.io/resumeScottGrauerGray_updated.pdf">Resume</a></span></li>
-	            <li><span class="secondary_color bold_text">GitHub: <a
-                href="https://github.com/sgrauerg6">https://github.com/sgrauerg6</a></span></li>
-              <li><span class="secondary_color bold_text">Google Scholar: <a
-                href="https://scholar.google.com/citations?user=y35b43QAAAAJ">https://scholar.google.com/citations?user=y35b43QAAAAJ</a></span></li>
-              <li><span class="secondary_color bold_text">LinkedIn: <a
-                href="https://www.linkedin.com/in/scott-grauer-gray-30992a1a">https://www.linkedin.com/in/scott-grauer-gray-30992a1a</a></span></li>
-	          </ul>
+              <span class="secondary_color bold_text">
+              <li id="contactEmail"></li>
+	            <li id="contactResume"></li>
+	            <li id="contactGithub"></li>
+              <li id="contactGoogleScholar"></li>
+              <li id="contactLinkedIn"></li>
+              </span>
+              </ul>
               <hr>
 			      <span class="header_color header_size bold_text">Bicycle food delivery</span>
-			  <!--
-        <video width="500" height="325" controls autoplay loop>
-  <source src="https://sgrauerg6.github.io/bikeDeliveries.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
--->
-<br>
-<br>
+            <br>
+            <br>
             <button id="JerseyCity" onclick="changeDeliveryLocation(0)">Jersey City</button>
             <button id="Manayunk" onclick="changeDeliveryLocation(1)">Manayunk</button>
             <button id="CenterCity" onclick="changeDeliveryLocation(2)">Center City</button>
             <br>
-            <img src="JerseyCityDelivery/delivery_map_0.png" alt="Delivery Maps" id="img" height="450" onclick="pausePlay()">
+            <img src="JerseyCityDelivery/delivery_map_0.png" alt="Delivery Maps" id="deliveryDayImg" height="450" onclick="pausePlay()">
             <br>
             <button id="prevButton" style="background-color: lightblue; border: none;" onclick="prevDeliveryMap()">
             Previous
@@ -150,146 +125,51 @@ Your browser does not support the video tag.
             <script type="text/javascript" src="js/delivery_map.js"></script>
 	          <br>
             <br>
-            <span class="secondary_color bold_text">
-              Jersey City, Manayunk, and Philadelphia Center City areas</span>
-            <div class="small_text">
-              <li>Deliveries for Grubhub, Uber Eats, DoorDash, Caviar, and Hungry Panda</li>
-              <li>2-speed Brompton folding bike used for deliveries in Jersey City and Philadelphia Center City</li>
-              <li>Gocycle GX folding e-bike used for deliveries in Manayunk area</li>
+            <div id="deliveryDescIndexPage">
             </div>
-            </ul>
             <hr>
             <span class="header_color header_size bold_text">Research Interests</span>
-            <ul>
-              <li>High performance computing and optimization,
-              particularly on graphics processing units (GPUs) using
-              CUDA, OpenCL, and directive-based languages
-              </li>
-              <li>Applications of high performance computing,
-              specifically as used for financial applications,
-              benchmark suites, and real-time stereo analysis/motion
-              estimation from a pair/sequence of images
-              </li>
-            </ul>
+            <div id="researchInterestsDesc"></div>
             <hr>
             <span class="header_color header_size bold_text">Publications and Supplemental Material</span>
             <ul>
               <li>
-              <span class="secondary_color bold_text">S. Grauer-Gray, W. Killian, R. Searles, J. Cavazos.
-              <a href="accFinAppsGpu.pdf">Accelerating Financial Applications on the
-              GPU</a>. In <a href="http://www.ece.neu.edu/groups/nucar/GPGPU/GPGPU6/">Sixth Workshop
-              on General Purpose Processing Using GPUs (GPGPU 6)
-              2013</a>.
-              </span>
+                <div id="paperInfo_6"></div>
               </li>
-            <ul>
-            <div class="li_small">
-              <li><a href="accFinAppsGpuSlides.pdf">Presentation Slides</a></li>
-              <li><a href="https://github.com/cavazos-lab/FinanceBench">
-              Code</a> (any work using this code should cite above paper) </li>
-            </div>
-            </ul>
+            <div id="paperSupp_6"></div>
             <br>
             <li>
-            <span class="secondary_color bold_text">
-              Zhan Yu, Christopher Thorpe, Xuan Yu, Scott Grauer-Gray, Feng Li, and Jingyi Yu. <a
-              href="http://link.springer.com/article/10.1007%2Fs00371-013-0778-4">
-              Racking Focus and Tracking Focus on Live Video Streams: A Stereo Solution</a>. In <a 
-              href="http://www.springer.com/computer/image+processing/journal/371">
-              The Visual Computer</a>, February 2013.</span>
+              <div id="paperInfo_5"></div>
             </li>
-            <ul>
-            <div class="li_small">
-              <li><a href="http://www.youtube.com/watch?v=2XnV8HZbnXw">Video 1</a>,
-                  <a href="http://www.youtube.com/watch?v=zMVb-CsREow">Video 2</a>,
-                  <a href="http://www.youtube.com/watch?v=kO-BJp-QaJM">Video 3</a></li>
-            </div>
-            </ul>
+            <div id="paperSupp_5"></div>
             <br>
             <li>
-              <span class="secondary_color bold_text">
-              S. Grauer-Gray, L. Xu, R. Searles, S. Ayalasomayajula, J. Cavazos. <a
-              href="autoTuneGpu.pdf">Auto-tuning a High-Level Language Targeted to GPU Codes
-              </a>. In <a href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6330715">
-              Proceedings of Innovative Parallel Computing (InPar) 2012</a>.
-              </span>
+              <div id="paperInfo_4"></div>
               (See IEEE Disclaimer below)
             </li>
-          <ul>
-          <div class="li_small">
-            <li><a href="inpar_2012_autotuning.pdf">Presentation Slides</a></li>
-            <li><a href="http://www.cse.ohio-state.edu/%7Epouchet/software/polybench/GPU/index.html">
-              Intial PolyBench/GPU Benchmark Suite</a> used for results in paper and <a
-              href="https://github.com/cavazos-lab/PolyBench-ACC">updated
-              version</a> that matches format of Polybench 3.2 and
-              adds OpenACC/OpenMP versions of each benchmark (any
-              work using either code should cite above paper)
-            </li>
-          </div>
-          </ul>
+            <div id="paperSupp_4"></div>
           <br>
           <li>
-            <span class="secondary_color bold_text">
-            Zhan Yu, Christopher Thorpe, Xuan Yu, Scott
-            Grauer-Gray, Feng Li, and Jingyi Yu. <a
-            href="dynamicDepthOfFieldStereoSolution.pdf">Dynamic
-            Depth-of-Field on Live Video Streams: A Stereo
-            Solution</a>. In <a href="http://cgi2011.site.uottawa.ca/index.php">Computer
-            Graphics International (CGI) 2011</a>.
-            </span>
+            <div id="paperInfo_3"></div>
           </li>
-          <ul>
-          <div class="li_small">
-            <li><a href="http://www.eecis.udel.edu/%7Ezyu/CGI2011/">Project Website</a>
-            </li>
-          </div>
-          </ul>
+          <div id="paperSupp_3"></div>
           <br>
           <li>
-          <span class="secondary_color bold_text">
-            S. Grauer-Gray, J. Cavazos. <a href="LCPC_2010_optBeliefProp.pdf">Optimizing and
-            Auto-tuning Belief Propagation on the GPU</a>. In <a
-            href="http://lcpc10.rice.edu/LCPC10_Home.html"> The 23rd International Workshop on 
-            Languages and Compilers for Parallel Computing (LCPC) 2010</a>.</li>
-          </span>
-          <ul>
-          <div class="li_small">
-            <li><a href="LCPC_2010_optBeliefPropPresent.pdf">Presentation Slides</a></li>
-          </div>
-          </ul>
+            <div id="paperInfo_2"></div>
+          </li>
+          <div id="paperSupp_2"></div>
           <br>
           <li>
-            <span class="secondary_color bold_text">
-            S. Grauer-Gray, C. Kambhamettu. <a
-            href="hiarchBeliefProp.pdf">Hierarchical Belief
-            Propagation To Reduce Search Space Using CUDA for
-            Stereo and Motion Estimation</a>. In <a
-            href="http://vision.cs.byu.edu/wacv2009/wacv.php">IEEE
-            Workshop on Applications of Computer Vision (WACV)
-            2009</a>.
-            </span>
+            <div id="paperInfo_1"></div>
             (See IEEE Disclaimer below)
           </li>
-          <ul>
-          <div class="li_small">
-            <li><a href="wacvPoster2009.pptx">Presentation Poster</a></li>
-            <li><a href="https://www.eecis.udel.edu/wiki/vims/index.php/Main/MotionBP">Project page</a></li>
-            <li><a href="https://github.com/sgrauerg6/HierarchicalBPForStereoAndMotionToReduceSearchSpace">
-              Code</a> (any work using this code should cite above paper)
-            </li>
-          </div>
-          </ul>
+          <div id="paperSupp_1"></div>
           <br>
           <li>
-            <span class="secondary_color bold_text">
-            S. Grauer-Gray, C. Kambhamettu, K. Palaniappan. <a
-            href="cudaBeliefProp.pdf">GPU Implementation of
-            Belief Propagation Using CUDA for Cloud Tracking and
-            Reconstruction</a>. In <a
-            href="http://www.iapr.org/members/newsletter/Newsletter09-02/index_files/Page865.htm">5th
-            IAPR Workshop on Pattern Recognition in Remote
-            Sensing (PRRS) 2008</a>.</span> (See IEEE Disclaimer below)
+            <div id="paperInfo_0"></div>
+            (See IEEE Disclaimer below)
           </li>
+          <!--<div id="paperSupp_0"></div>-->
           <ul>
           <div class="li_small">
             <li><a href="tampaCudaBeliefPropTalk.pdf">Presentation Slides</a></li>
@@ -348,13 +228,8 @@ Your browser does not support the video tag.
           <span class="header_size bold_text"> IEEE Disclamer</span>
           <br>
           <span class="small_text">
-            &#169 20xx IEEE. Personal use of this material is permitted.
-            Permission from IEEE must be obtained for all other uses, in
-            any current or future media, including
-            reprinting/republishing this material for advertising or
-            promotional purposes, creating new collective works, for
-            resale or redistribution to servers or lists, or reuse of
-            any copyrighted component of this work in other works.</span>
+            <div id="IEEENotice"></div>
+            </span>
           </td>
           <td valign="top"><br>
           </td>
@@ -365,6 +240,8 @@ Your browser does not support the video tag.
         </tr>
       </tbody>
     </table>
+    <script type="text/javascript" src="js/index_page.js"></script>
+    <script type="text/javascript" src="js/publications.js"></script>
     <!-- Start of StatCounter Code -->
     <script type="text/javascript">
 var sc_project=5698203; 
