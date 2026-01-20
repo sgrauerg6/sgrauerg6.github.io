@@ -77,6 +77,13 @@ const DELIVERY_DESC = `
               <li>Gocycle GX folding e-bike used for deliveries in Manayunk area</li>
             </div>`
 
+const SECTION_HEADING_FORMAT = `<span class="header_color header_size bold_text">`;
+const SECTION_HEADING_FORMAT_CLOSE = `</span>`;
+const CONTACT_HEADING = `Contact`;
+const BIKE_DELIVERY_HEADING = `Bicycle Food Delivery`;
+const RESEARCH_INTEREST_HEADING = `Research Interests`;
+const PUBLICATIONS_HEADING = `Publications and Supplemental Material`;
+
 function addGradSchoolWorkInfo() {
   gradSchoolContent.innerHTML = GRAD_SCHOOL_DESC;
   work1Content.innerHTML = WORK_1_DESC;
@@ -103,8 +110,20 @@ function addIndexPagePic() {
   indPagePicContent.innerHTML = INDEX_PAGE_PIC;
 }
 
+function addSectionHeadings() {
+  document.getElementById("contactHeading").innerHTML = 
+    SECTION_HEADING_FORMAT + CONTACT_HEADING + SECTION_HEADING_FORMAT_CLOSE;
+  document.getElementById("bikeDeliveryHeading").innerHTML = 
+    SECTION_HEADING_FORMAT + BIKE_DELIVERY_HEADING + SECTION_HEADING_FORMAT_CLOSE;
+  document.getElementById("researchInterestsHeading").innerHTML = 
+    SECTION_HEADING_FORMAT + RESEARCH_INTEREST_HEADING + SECTION_HEADING_FORMAT_CLOSE;
+  document.getElementById("publicationsHeading").innerHTML = 
+    SECTION_HEADING_FORMAT + PUBLICATIONS_HEADING + SECTION_HEADING_FORMAT_CLOSE;
+}
+
 addGradSchoolWorkInfo();
 addContactInfo();
 addDeliveryDesc();
 addResearchInterestsDesc();
 addIndexPagePic();
+addSectionHeadings();

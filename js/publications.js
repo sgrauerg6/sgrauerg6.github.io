@@ -164,6 +164,7 @@ const PAPER_INFO_FORMATTING_END = `</span>`
 
 const PUBLICATIONS_INFO = [PUB_0, PUB_1, PUB_2, PUB_3, PUB_4, PUB_5, PUB_6];
 const PUBLICATIONS_SUPP = [PUB_SUPP_0, PUB_SUPP_1, PUB_SUPP_2, PUB_SUPP_3, PUB_SUPP_4, PUB_SUPP_5, PUB_SUPP_6];
+const SEE_IEE_NOTICE = `<span class="small_text">(See IEEE disclaimer below)</span>`;
 
 function addPubInfo(paperNum) {
   let pubInfoID = "paperInfo_" + paperNum.toString();
@@ -182,6 +183,13 @@ function addIEEENotice() {
   ieeeNoticeContent.innerHTML = IEEE_NOTICE;
 }
 
+function replaceTextInClass(className, text) {
+    var elms = document.querySelectorAll('.' + className), i;
+    for (i = 0; i < elms.length; ++i) {
+        elms[i].innerHTML = text;
+    }
+}
+
 addPubInfo(0);
 addPubInfo(1);
 addPubInfo(2);
@@ -198,4 +206,6 @@ addPubSupp(4);
 addPubSupp(5);
 addPubSupp(6);
 
+replaceTextInClass("seeIEEE", SEE_IEE_NOTICE);
 addIEEENotice();
+
