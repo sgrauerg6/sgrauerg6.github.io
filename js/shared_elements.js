@@ -1,20 +1,19 @@
 const LEFT_MENU_DATA_CELL = `
-            <a href="index.html">Home</a><br>
+            <div id="index_page"><a href="index.html">Home</a><br></div></div>
             <br>
-            <a href="research.html">Research</a><br>
+            <div id="research_page"><a href="research.html">Research</a><br></div>
             <br>
-            <a href="publications.html">Publications</a><br>
+            <div id="publications_page"><a href="publications.html">Publications</a><br></div>
             <br>
-            <a href="teaching.html">Teaching/TAing</a><br>
+            <div id="teaching_page"><a href="teaching.html">Teaching/TAing</a><br></div>
             <br>
-            <a href="pictures.html">Pictures</a><br>
+            <div id="pictures_page"><a href="pictures.html">Pictures</a><br></div>
             <br>
-            <a href="otherwork.html">Other work</a><br>
-			      <br>
-  			    <a href="foodDelivery.html">Food Delivery</a><br>
-			      <br>
-			      <a href="photomap.html">Photo Map</a><br>
-          `;
+            <div id="other_work_page"><a href="otherwork.html">Other Work</a><br></div>
+			<br>
+  			<div id="food_delivery_page"><a href="foodDelivery.html">Food Delivery</a><br></div>
+			<br>
+			<div id="photo_map_page"><a href="photomap.html">Photo Map</a><br></div>`;
 
 function addTopRowWLinks() {
   // Get a reference to the table element
@@ -117,6 +116,10 @@ function addRowUnderName() {
 
 function addLeftMenu() {
   document.getElementById('left_menu').innerHTML = LEFT_MENU_DATA_CELL;
+}
+
+function setSection(sectionId, sectionName) {
+  document.getElementById(sectionId).innerHTML = sectionName;
 }
 
 addTopRowWLinks();
