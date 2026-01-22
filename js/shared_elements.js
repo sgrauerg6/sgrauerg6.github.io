@@ -24,23 +24,12 @@ function addTopRowWLinks() {
 
   // Create cells and add content to top row
   var cell0 = topRow.insertCell(-1);
-  var cell1 = topRow.insertCell(-1);
   var cell2 = topRow.insertCell(-1);
-  var cell3 = topRow.insertCell(-1);
-  var cell4 = topRow.insertCell(-1);
 
-  cell0.classList.add("top_table_bg_color");
+  cell0.colSpan = 3;
   cell0.classList.add("top_table_cell");
-  cell1.classList.add("top_table_bg_color");
-  cell1.classList.add("top_table_cell");
-  cell2.classList.add("top_table_bg_color");
-  cell2.classList.add("top_table_cell");
-  cell3.classList.add("top_table_bg_color");
-  cell3.classList.add("top_table_cell");
-  cell3.innerHTML = `<a href="http://www.cis.udel.edu/">Udel CIS Home</a> |
+  cell0.innerHTML = `<a href="http://www.cis.udel.edu/">Udel CIS Home</a> |
 <a href="http://udel.edu/">Udel Home</a></td>`
-  cell4.classList.add("top_table_bg_color");
-  cell4.classList.add("top_table_cell");
 }
 
 function addSecondRow() {
@@ -54,8 +43,6 @@ function addSecondRow() {
   var cell0 = topRow.insertCell(-1);
   var cell1 = topRow.insertCell(-1);
   var cell2 = topRow.insertCell(-1);
-  var cell3 = topRow.insertCell(-1);
-  var cell4 = topRow.insertCell(-1);
 
   cell0.classList.add("second_block_left");
   cell0.style.height = '20px';
@@ -63,9 +50,6 @@ function addSecondRow() {
   cell1.style.height = '20px';
   cell2.classList.add("main_bg_color");
   cell2.classList.add("main_region_block");
-  cell3.classList.add("main_bg_color");
-  cell3.classList.add("main_region_block");
-  cell4.style.height = '20px';
 }
 
 function addNameRow() {
@@ -79,16 +63,12 @@ function addNameRow() {
   var cell0 = topRow.insertCell(-1);
   var cell1 = topRow.insertCell(-1);
   var cell2 = topRow.insertCell(-1);
-  var cell3 = topRow.insertCell(-1);
-  var cell4 = topRow.insertCell(-1);
 
   cell0.classList.add("second_block_left");
   cell1.classList.add("section_separator");
   cell2.classList.add("main_bg_color");
   cell2.classList.add("main_region_block");
-  cell3.classList.add("main_bg_color");
-  cell3.classList.add("main_region_block");
-  cell3.innerHTML = `<span class="name_style">Scott Grauer-Gray</span>`;
+  cell2.innerHTML = `<span class="name_style">Scott Grauer-Gray</span>`;
 }
 
 function addRowUnderName() {
@@ -102,16 +82,12 @@ function addRowUnderName() {
   var cell0 = topRow.insertCell(-1);
   var cell1 = topRow.insertCell(-1);
   var cell2 = topRow.insertCell(-1);
-  var cell3 = topRow.insertCell(-1);
-  var cell4 = topRow.insertCell(-1);
   
   cell0.classList.add("second_block_left");
   cell1.classList.add("section_separator");
   cell2.classList.add("main_bg_color");
   cell2.classList.add("main_region_block");
-  cell3.classList.add("main_bg_color");
-  cell3.classList.add("main_region_block");
-  cell3.innerHTML = `<hr>`;
+  cell2.innerHTML = `<hr>`;
 }
 
 function addLeftMenu() {
