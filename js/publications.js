@@ -184,10 +184,10 @@ function addIEEENotice() {
 }
 
 function replaceTextInClass(className, text) {
-    var elms = document.querySelectorAll('.' + className), i;
-    for (i = 0; i < elms.length; ++i) {
-        elms[i].innerHTML = text;
-    }
+  var elms = document.querySelectorAll('.' + className), i;
+  for (i = 0; i < elms.length; ++i) {
+    elms[i].innerHTML = text;
+  }
 }
 
 addPubInfo(0);
