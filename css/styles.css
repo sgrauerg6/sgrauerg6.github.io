@@ -4,6 +4,11 @@
 
 .top_table {
   width: 90%;
+  border-spacing: 0px;
+}
+
+th, td { 
+  padding: 2px;
 }
 
 /* top bar background color */
