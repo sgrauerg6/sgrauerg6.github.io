@@ -1,3 +1,15 @@
+const FOOD_DELIVERY_INFO_FD_PAGE =
+  `<ul>
+     <li>Jersey City, Manayunk, and Philadelphia Center City areas</li>
+     <li>Deliveries for Grubhub, Uber Eats, DoorDash, Caviar, and Hungry Panda</li>
+     <li><a href="https://us.brompton.com/catalogue/bikes/brompton/m2l-signal-orange-2-speed">2-speed Brompton</a> folding bike used for deliveries in Jersey City and Philadelphia Center City</li>
+     <li><a href="https://www.theverge.com/2019/7/29/8934573/gocycle-review-folding-gx-price-specs">Gocycle GX folding e-bike</a> used for deliveries in Manayunk area</li>
+		</ul>`;
+  
+function addFoodDeliveryInfoFDPage() {
+  document.getElementById("food_delivery_info_fd_page").innerHTML = FOOD_DELIVERY_INFO_FD_PAGE;
+}
+
 const img = document.getElementById("deliveryDayImg");
 const playPauseBtn = document.getElementById("pausePlayButton");
 const locationBtns = [document.getElementById("JerseyCity"), document.getElementById("Manayunk"), document.getElementById("CenterCity")];
@@ -77,4 +89,6 @@ const nextDeliveryMap = () => {
 }
 
 startPlay();
-changeDeliveryLocation(0)
+changeDeliveryLocation(0);
+
+

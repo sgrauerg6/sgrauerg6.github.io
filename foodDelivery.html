@@ -21,12 +21,7 @@
           </td>
           <td class="main_bg_color main_region_block">
 			    <span class="header_color header_size bold_text">Bicycle food delivery</span>
-			    <ul>
-            <li>Jersey City, Manayunk, and Philadelphia Center City areas</li>
-            <li>Deliveries for Grubhub, Uber Eats, DoorDash, Caviar, and Hungry Panda</li>
-            <li><a href="https://us.brompton.com/catalogue/bikes/brompton/m2l-signal-orange-2-speed">2-speed Brompton</a> folding bike used for deliveries in Jersey City and Philadelphia Center City</li>
-            <li><a href="https://www.theverge.com/2019/7/29/8934573/gocycle-review-folding-gx-price-specs">Gocycle GX folding e-bike</a> used for deliveries in Manayunk area</li>
-				  </ul>
+          <div id="food_delivery_info_fd_page"></div>
           <button id="JerseyCity" onclick="changeDeliveryLocation(0)">Jersey City</button>
           <button id="Manayunk" onclick="changeDeliveryLocation(1)">Manayunk</button>
           <button id="CenterCity" onclick="changeDeliveryLocation(2)">Center City</button>
@@ -42,14 +37,15 @@
           <button id="nextButton" style="background-color: lightblue; border: none;" onclick="nextDeliveryMap()">
           Next
           </button>
-          <script type="text/javascript" src="js/delivery_map.js"></script>
           </td>
         </tr>
       </tbody>
     </table>
     <script type="text/javascript" src="js/shared_elements.js"></script>
+    <script type="text/javascript" src="js/delivery_map.js"></script>
     <script>
       setSection("food_delivery_page", "Food Delivery");
+      addFoodDeliveryInfoFDPage();
     </script>
   </body>
 </html>
