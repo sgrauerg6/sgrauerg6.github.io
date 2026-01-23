@@ -1,4 +1,4 @@
-let showMore = true;
+let showMore;
 const showMoreBtn = document.getElementById("showMoreButton");
 const speedupsContent = document.getElementById("speedupsShown");
 
@@ -43,7 +43,7 @@ Spreadsheet with detailed results
 </li>`
 
 function showMoreToggle() {
-  if (showMore) {
+  if ((showMore === undefined) || showMore) {
     showMore = false;
     showMoreBtn.innerHTML = "Show More";
     speedupsContent.innerHTML = HTML_SHOW_DEFAULT;
@@ -51,7 +51,6 @@ function showMoreToggle() {
     showMoreBtn.style.color = "black";
     showMoreBtn.style.fontSize = "12px";
     showMoreBtn.style.borderWidth = "0px";
-    //showMoreBtn.style.fontWeight = "bold";
   }
   else {
     showMore = true;
@@ -61,7 +60,6 @@ function showMoreToggle() {
     showMoreBtn.style.color = "black";
     showMoreBtn.style.fontSize = "12px";
     showMoreBtn.style.borderWidth = "0px";
-    //showMoreBtn.style.fontWeight = "bold";
   }  
 }
 

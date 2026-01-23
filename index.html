@@ -46,15 +46,9 @@
             <br>
             <img src="JerseyCityDelivery/delivery_map_0.png" alt="Delivery Maps" id="deliveryDayImg" height="450" onclick="pausePlay()">
             <br>
-            <button id="prevButton" style="background-color: lightblue; border: none;" onclick="prevDeliveryMap()">
-            Previous
-            </button>
-            <button id="pausePlayButton" style="background-color: lightblue; border: none;" onclick="pausePlay()">
-            Pause
-            </button>
-            <button id="nextButton" style="background-color: lightblue; border: none;" onclick="nextDeliveryMap()">
-            Next
-            </button>
+            <button class="fd_control_button" id="prevButton" onclick="prevDeliveryMap()">Previous</button>
+            <button class="fd_control_button" id="pausePlayButton" onclick="pausePlay()">Pause</button>
+            <button class="fd_control_button" id="nextButton" onclick="nextDeliveryMap()">Next</button>
             <script type="text/javascript" src="js/delivery_map.js"></script>
 	          <br>
             <br>
@@ -125,7 +119,6 @@
                 </div>
                 </li>
                   <button id="showMoreButton" onclick="showMoreToggle()">Show More</button>
-                  <script type="text/javascript" src="js/speedups_show.js"></script>
                 </div>
 					    </ul>
             </ul>
@@ -155,7 +148,6 @@
                 <button id="followup2InfoButton" onclick="followup2ShowToggle()">Show More</button>
                 </div>
               </ul>
-              <script type="text/javascript" src="js/paper_info_show.js"></script>
             </ul>
           </ul>
           <span class="header_size bold_text">IEEE Disclamer</span>
@@ -170,6 +162,8 @@
     <script type="text/javascript" src="js/shared_elements.js"></script>
     <script type="text/javascript" src="js/index_page.js"></script>
     <script type="text/javascript" src="js/publications.js"></script>
+    <script type="text/javascript" src="js/speedups_show.js"></script>
+    <script type="text/javascript" src="js/paper_info_show.js"></script>
     <script>
       setSection("index_page", "Home");
     </script>

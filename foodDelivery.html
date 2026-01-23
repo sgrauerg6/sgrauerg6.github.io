@@ -20,7 +20,7 @@
           <td class="section_separator"><br>
           </td>
           <td class="main_bg_color main_region_block">
-			    <span class="header_color header_size bold_text">Bicycle food delivery</span>
+			    <span class="header_color header_size bold_text">Bicycle Food Delivery</span>
           <div id="food_delivery_info_fd_page"></div>
           <button id="JerseyCity" onclick="changeDeliveryLocation(0)">Jersey City</button>
           <button id="Manayunk" onclick="changeDeliveryLocation(1)">Manayunk</button>
@@ -28,15 +28,9 @@
           <br>
           <img src="JerseyCityDelivery/delivery_map_0.png" alt="Delivery Maps" id="deliveryDayImg" height="640" onclick="pausePlay()">
           <br>
-          <button id="prevButton" style="background-color: lightblue; border: none;" onclick="prevDeliveryMap()">
-          Previous
-          </button>
-          <button id="pausePlayButton" style="background-color: lightblue; border: none;" onclick="pausePlay()">
-          Pause
-          </button>
-          <button id="nextButton" style="background-color: lightblue; border: none;" onclick="nextDeliveryMap()">
-          Next
-          </button>
+          <button class="fd_control_button" id="prevButton" onclick="prevDeliveryMap()">Previous</button>
+          <button class="fd_control_button" id="pausePlayButton" onclick="pausePlay()">Pause</button>
+          <button class="fd_control_button" id="nextButton" onclick="nextDeliveryMap()">Next</button>
           </td>
         </tr>
       </tbody>

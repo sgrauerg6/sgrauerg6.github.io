@@ -114,3 +114,8 @@ ul.taing_list {
   color: rgb(0, 0, 153);
   font-weight: bold;
 }
+
+.fd_control_button {
+  background-color: lightblue;
+  border: none; 
+}
