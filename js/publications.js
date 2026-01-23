@@ -197,6 +197,8 @@ addPubInfo(3);
 addPubInfo(4);
 addPubInfo(5);
 addPubInfo(6);
+replaceTextInClass("seeIEEE", SEE_IEE_NOTICE);
+addIEEENotice();
 
 //addPubSupp(0);
 addPubSupp(1);
@@ -206,6 +208,4 @@ addPubSupp(4);
 addPubSupp(5);
 addPubSupp(6);
 
-replaceTextInClass("seeIEEE", SEE_IEE_NOTICE);
-addIEEENotice();
 

@@ -92,6 +92,10 @@ ul li {
   margin-top: 3px;
 }
 
+.publication_list li {
+  margin-bottom: 18px;
+}
+
 .li_small li {
   font-size: 12px;
 }
