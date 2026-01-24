@@ -27,17 +27,28 @@ const PIC_5_CONTENT =
 const PIC_5_INFO = `At the International Conference of Pattern Recognition
                   (ICPR) in December 2008`;
 
+class PicWInfo {
+  constructor(contentId, content, infoId, info) {
+    this.contentId = contentId;
+    this.content = content;
+    this.infoId = infoId;
+    this.info = info;
+  }
+}
+
+const picsInfo = [
+  new PicWInfo("pic1_content", PIC_1_CONTENT, "pic1_info", PIC_1_INFO),
+  new PicWInfo("pic2_content", PIC_2_CONTENT, "pic2_info", PIC_2_INFO),
+  new PicWInfo("pic3_content", PIC_3_CONTENT, "pic3_info", PIC_3_INFO),
+  new PicWInfo("pic4_content", PIC_4_CONTENT, "pic4_info", PIC_4_INFO),
+  new PicWInfo("pic5_content", PIC_5_CONTENT, "pic5_info", PIC_5_INFO)
+];
+
 function addPicturesWInfo() {
-  document.getElementById("pic1_content").innerHTML = PIC_1_CONTENT;
-  document.getElementById("pic1_info").innerHTML = PIC_1_INFO;
-  document.getElementById("pic2_content").innerHTML = PIC_2_CONTENT;
-  document.getElementById("pic2_info").innerHTML = PIC_2_INFO;
-  document.getElementById("pic3_content").innerHTML = PIC_3_CONTENT;
-  document.getElementById("pic3_info").innerHTML = PIC_3_INFO;
-  document.getElementById("pic4_content").innerHTML = PIC_4_CONTENT;
-  document.getElementById("pic4_info").innerHTML = PIC_4_INFO;
-  document.getElementById("pic5_content").innerHTML = PIC_5_CONTENT;
-  document.getElementById("pic5_info").innerHTML = PIC_5_INFO;
+  picsInfo.forEach(function(currPicsInfo) {
+    document.getElementById(currPicsInfo.contentId).innerHTML = currPicsInfo.content;
+    document.getElementById(currPicsInfo.infoId).innerHTML = currPicsInfo.info;
+  });
 }
 
 addPicturesWInfo();

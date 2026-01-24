@@ -1,10 +1,3 @@
-let showMore1 = true;
-let showMore2 = true;
-const followup1Btn = document.getElementById("followup1InfoButton");
-const followup2Btn = document.getElementById("followup2InfoButton");
-const followup1Content = document.getElementById("followup1Shown");
-const followup2Content = document.getElementById("followup2Shown");
-
 const FOLLOWUP_1_SHOW = `
 <li>Describes additional CUDA code optimizations with evaluation on multiple GPUs including Tesla V100.</li>
 <li>Introduces parallel CPU implementation using OpenMP, SIMD instructions, and the same optimizations as the CUDA code, with evaluation on multiple CPUs.</li>
@@ -26,8 +19,13 @@ stereo set, speedups/slowdowns when using 16-bit floats and 64-bit doubles compa
 when using templated disparity counts that allow the iteration counts of loops that iterate through possible disparities
 to be known at compile time.</li>`
 
+//boolean variables indicating whether or not showing more info is currently toggled and shown
+let showMore1, showMore2;
+
 function followup1ShowToggle() {
-  if (showMore1) {
+  const followup1Btn = document.getElementById("followup1InfoButton");
+  const followup1Content = document.getElementById("followup1Shown");
+  if ((showMore1 === undefined) || showMore1) {
     showMore1 = false;
     followup1Btn.innerHTML = "Show More";
     followup1Content.innerHTML = "";
@@ -35,7 +33,6 @@ function followup1ShowToggle() {
     followup1Btn.style.color = "black";
     followup1Btn.style.fontSize = "12px";
     followup1Btn.style.borderWidth = "0px";
-    //followup1Btn.style.fontWeight = "bold";
   }
   else {
     showMore1 = true;
@@ -45,12 +42,13 @@ function followup1ShowToggle() {
     followup1Btn.style.color = "black";
     followup1Btn.style.fontSize = "12px";
     followup1Btn.style.borderWidth = "0px";
-    //followup1Btn.style.fontWeight = "bold";
   }  
 }
 
 function followup2ShowToggle() {
-  if (showMore2) {
+  const followup2Btn = document.getElementById("followup2InfoButton");
+  const followup2Content = document.getElementById("followup2Shown");
+  if ((showMore2 === undefined) || showMore2) {
     showMore2 = false;
     followup2Btn.innerHTML = "Show More";
     followup2Content.innerHTML = "";
@@ -58,7 +56,6 @@ function followup2ShowToggle() {
     followup2Btn.style.color = "black";
     followup2Btn.style.fontSize = "12px";
     followup2Btn.style.borderWidth = "0px";
-    //followup1Btn.style.fontWeight = "bold";
   }
   else {
     showMore2 = true;
@@ -68,7 +65,6 @@ function followup2ShowToggle() {
     followup2Btn.style.color = "black";
     followup2Btn.style.fontSize = "12px";
     followup2Btn.style.borderWidth = "0px";
-    //followup2Btn.style.fontWeight = "bold";
   }  
 }
 

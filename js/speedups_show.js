@@ -1,7 +1,3 @@
-let showMore;
-const showMoreBtn = document.getElementById("showMoreButton");
-const speedupsContent = document.getElementById("speedupsShown");
-
 const HTML_SHOW_DEFAULT = `
 <li>NVIDIA B200 (SXM6): 3.99x</li>
 <li>NVIDIA H100 (GH100): 3.34x</li>
@@ -42,7 +38,11 @@ Spreadsheet with detailed results
 </a></span>
 </li>`
 
+let showMore;
+
 function showMoreToggle() {
+  const showMoreBtn = document.getElementById("showMoreButton");
+  const speedupsContent = document.getElementById("speedupsShown");
   if ((showMore === undefined) || showMore) {
     showMore = false;
     showMoreBtn.innerHTML = "Show More";
