@@ -1,40 +1,68 @@
-class Location {
-  constructor(name, button, imPathStart, numIms) {
-    this.name = name;
+//class corresponding to delivery maps for location
+class LocationDelMaps {
+  constructor(button, imPathStart, numDelMaps) {
+    //button to press to select location to display delivery maps
     this.button = button;
+
+    //image path start for delivery maps at location
     this.imPathStart = imPathStart;
-    this.numIms = numIms;
+
+    //total number of delivery maps at location
+    this.numDelMaps = numDelMaps;
   }
 
-  imagePath(imgIndex) {
+  //get path of delivery map image at current index
+  imagePath(delMapIdx) {
     const imagePathEnd = ".png";
-    return this.imPathStart + imgIndex.toString() + imagePathEnd;
+    return this.imPathStart + delMapIdx.toString() + imagePathEnd;
   }
 }
 
-const locations = [
-  new Location("Jersey City", document.getElementById("JerseyCity"), "JerseyCityDelivery/delivery_map_", 100),
-  new Location("Manayunk", document.getElementById("Manayunk"), "ManayunkDelivery/ManayunkDelivery_", 59),
-  new Location("Center City", document.getElementById("CenterCity"), "CenterCityDelivery/CenterCityDelivery_", 46)];
-const deliveryDayImg = document.getElementById("deliveryDayImg");
-const playPauseBtn = document.getElementById("pausePlayButton");
-let index = 0;
-let play = true;
-let delivery_location = 0;
-let travel;
+//mapping of delivery location to delivery map for location
+const locDelMaps = new Map([
+  ["Jersey City",
+    new LocationDelMaps(document.getElementById("JerseyCity"), "JerseyCityDelivery/delivery_map_", 100)],
+  ["Manayunk",
+    new LocationDelMaps(document.getElementById("Manayunk"), "ManayunkDelivery/ManayunkDelivery_", 59)],
+  ["Center City",
+    new LocationDelMaps(document.getElementById("CenterCity"), "CenterCityDelivery/CenterCityDelivery_", 46)]
+]);
 
+//image element for displayed delivery map
+const deliveryDayImg = document.getElementById("deliveryDayImg");
+
+//button to toggle between playing and pausing delivery map
+const playPauseBtn = document.getElementById("pausePlayButton");
+
+//index of current delivery map displayed
+let delMapIdx = 0;
+
+//delivery location of delivery map currently display
+let delivery_location = "Jersey City";
+
+//boolean indicating whether delivery map display is in play mode or not
+let play = true;
+
+//display interval used when play mode is enabled where displayed delivery
+//map automatically goes to next delivery map every second and then wraps
+//around when the last delivery map for location is reached
+let displayInterval;
+
+//change delivery location for displayed delivery map
 function changeDeliveryLocation(location) {
-    clearInterval(travel);
+    clearInterval(displayInterval);
     delivery_location = location;
-    index = 0;
-    locations.forEach(function(location, locationNum) {
-      if (locationNum == delivery_location) {
-        location.button.style.backgroundColor = "green";
-        location.button.style.color = "white";
+    delMapIdx = 0;
+    locDelMaps.forEach(function(locationDelMap, locationName) {
+      if (locationName == delivery_location) {
+        //set button display for currently selected delivery location
+        locationDelMap.button.style.backgroundColor = "green";
+        locationDelMap.button.style.color = "white";
       }
       else {
-        location.button.style.backgroundColor = "lightblue";
-        location.button.style.color = "black";
+        //set button display for other delivery locations
+        locationDelMap.button.style.backgroundColor = "lightblue";
+        locationDelMap.button.style.color = "black";
       }
     });
     
@@ -42,23 +70,26 @@ function changeDeliveryLocation(location) {
       startPlay();
     }
     else {
-      deliveryDayImg.src = locations[delivery_location].imagePath(index);
+      deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
     }
 };
 
+//start play mode where displayed delivery map for current location is automatically
+//changed to next delivery map for location every second and then wrapped around
 const startPlay = () => {
-  travel = setInterval(() => {
-    ++index;
-    index = (index >= locations[delivery_location].numIms) ? 0 : index;
-    deliveryDayImg.src = locations[delivery_location].imagePath(index);
+  displayInterval = setInterval(() => {
+    ++delMapIdx;
+    delMapIdx = (delMapIdx >= locDelMaps.get(delivery_location).numDelMaps) ? 0 : delMapIdx;
+    deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
   }, 1000);
 };
 
+//toggle between pause and play modes
 const pausePlay = () => {
   if (play) {
     play = false;
     playPauseBtn.innerHTML = "Play";
-    clearInterval(travel);
+    clearInterval(displayInterval);
   }
   else {
     play = true;
@@ -67,27 +98,33 @@ const pausePlay = () => {
   }
 }
 
+//go to previous delivery map for currently display location
 const prevDeliveryMap = () => {
   if (play) {
     pausePlay();
   }
-  index--;
-  index = (index < 0) ? index = locations[delivery_location].numIms - 1 : index;
-  deliveryDayImg.src = locations[delivery_location].imagePath(index);
+  delMapIdx--;
+  delMapIdx = (delMapIdx < 0) ? delMapIdx = locDelMaps.get(delivery_location).numDelMaps - 1 : delMapIdx;
+  deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
 }
 
+//go to next delivery map for currently display location
 const nextDeliveryMap = () => {
   if (play) {
     pausePlay();
   }
-  index++;
-  index = (index >= locations[delivery_location].numIms) ? 0 : index;
-  deliveryDayImg.src = locations[delivery_location].imagePath(index);
+  delMapIdx++;
+  delMapIdx = (delMapIdx >= locDelMaps.get(delivery_location).numDelMaps) ? 0 : delMapIdx;
+  deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
 }
 
+//start delivery map display in play mode
 startPlay();
-changeDeliveryLocation(0);
 
+//start delivery location at Jersey City
+changeDeliveryLocation("Jersey City");
+
+//food delivery info to display on food delivery page
 const FOOD_DELIVERY_INFO_FD_PAGE =
   `<ul>
      <li>Jersey City, Manayunk, and Philadelphia Center City areas</li>
@@ -95,9 +132,8 @@ const FOOD_DELIVERY_INFO_FD_PAGE =
      <li><a href="https://us.brompton.com/catalogue/bikes/brompton/m2l-signal-orange-2-speed">2-speed Brompton</a> folding bike used for deliveries in Jersey City and Philadelphia Center City</li>
      <li><a href="https://www.theverge.com/2019/7/29/8934573/gocycle-review-folding-gx-price-specs">Gocycle GX folding e-bike</a> used for deliveries in Manayunk area</li>
 	 </ul>`;
-  
+
+//function to add food delivery info to food delivery page
 function addFoodDeliveryInfoFDPage() {
   document.getElementById("food_delivery_info_fd_page").innerHTML = FOOD_DELIVERY_INFO_FD_PAGE;
 }
-
-
