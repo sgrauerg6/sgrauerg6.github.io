@@ -133,6 +133,8 @@ const nextDeliveryMap = () => {
   deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
 }
 
+playPauseBtn.style.width = "70px";
+
 //start delivery map display in play mode
 startPlay();
 
