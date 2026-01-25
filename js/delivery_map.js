@@ -1,5 +1,6 @@
 //class corresponding to delivery maps for location
 class LocationDelMaps {
+  //constructor to initialize delivery maps at location
   constructor(button, imPathStart, numDelMaps) {
     //button to press to select location to display delivery maps
     this.button = button;
@@ -50,9 +51,17 @@ let displayInterval;
 
 //change delivery location for displayed delivery map
 function changeDeliveryLocation(location) {
+    //clear display interval which may be active for previous
+    //selected delivery location (active if in play mode)
     clearInterval(displayInterval);
+
+    //set selected delivery location
     delivery_location = location;
+
+    //set delivery map index to 0 for selected delivery location
     delMapIdx = 0;
+
+    //go through delivery maps elements for each location
     locDelMaps.forEach(function(locationDelMap, locationName) {
       if (locationName == delivery_location) {
         //set button display for currently selected delivery location
@@ -67,9 +76,13 @@ function changeDeliveryLocation(location) {
     });
     
     if (play) {
+      //start interval to automatically increment delivery map images every second
+      //if in play mode
       startPlay();
     }
     else {
+      //set delivery map display to delivery map for selected location
+      //at current delivery map index
       deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
     }
 };
@@ -87,11 +100,13 @@ const startPlay = () => {
 //toggle between pause and play modes
 const pausePlay = () => {
   if (play) {
+    //turn off play mode
     play = false;
     playPauseBtn.innerHTML = "Play";
     clearInterval(displayInterval);
   }
   else {
+    //turn on play mode
     play = true;
     playPauseBtn.innerHTML = "Pause";
     startPlay();
