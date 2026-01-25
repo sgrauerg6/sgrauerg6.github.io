@@ -68,15 +68,6 @@ const researchInterestsContent = document.getElementById('researchInterestsDesc'
 
 const indPagePicContent = document.getElementById('indexPagePic');
 
-const DELIVERY_DESC = `
-  <span class="secondary_color bold_text">
-  Jersey City, Manayunk, and Philadelphia Center City areas</span>
-  <div class="small_text">
-  <li>Deliveries for Grubhub, Uber Eats, DoorDash, Caviar, and Hungry Panda</li>
-  <li>2-speed Brompton folding bike used for deliveries in Jersey City and Philadelphia Center City</li>
-              <li>Gocycle GX folding e-bike used for deliveries in Manayunk area</li>
-            </div>`
-
 const SECTION_HEADING_FORMAT = `<span class="header_color header_size bold_text">`;
 const SECTION_HEADING_FORMAT_CLOSE = `</span>`;
 const CONTACT_HEADING = `Contact`;
@@ -107,7 +98,20 @@ function addResearchInterestsDesc() {
 }
 
 function addIndexPagePic() {
-  indPagePicContent.innerHTML = INDEX_PAGE_PIC;
+  //pic is randomly selected from array of possibilities
+  const POSS_PIC_SRC_PATHS = ["scottGPGPU6.png", "scottInpar2012.jpg", "scottLcpc2010.jpg", "Scott.jpg", "ScottIcpr2008.jpg"];
+  const indexSelectedPic = Math.floor(Math.random() * 5);
+  
+  //width of image is random value between 250 and 300 inclusive
+  const imWidth = Math.floor(Math.random() * 51) + 250;
+
+  //generate HTML tag for pic with selected pic and generated width
+  const imgHtml =
+    `<img style="width: ` + imWidth.toString() + `;" alt="picOfMe" src="` +
+     POSS_PIC_SRC_PATHS[indexSelectedPic] + `";>`;
+  
+  //add HTML tag for pic to page
+  indPagePicContent.innerHTML = imgHtml;
 }
 
 function addSectionHeadings() {
