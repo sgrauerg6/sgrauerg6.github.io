@@ -29,9 +29,18 @@
           </div>
           <img src="JerseyCityDelivery/delivery_map_0.png" alt="Delivery Maps" id="deliveryDayImg" height="640" onclick="pausePlay()">
           <br>
-          <button class="fd_control_button fd_prev_next_button" id="prevButton" onclick="prevDeliveryMap()">Previous</button>
-          <button class="fd_control_button fd_playpause_button" id="pausePlayButton" onclick="pausePlay()">Pause</button>
-          <button class="fd_control_button fd_prev_next_button" id="nextButton" onclick="nextDeliveryMap()">Next</button>
+          <table class="fd_control_buttons_table">
+            <tr>
+              <td>
+                <div class="control_buttons">
+                <button class="fd_control_button fd_prev_next_button" id="prevButton" onclick="prevDeliveryMap()">Previous</button>
+                <button class="fd_control_button fd_playpause_button" id="pausePlayButton" onclick="pausePlay()">Pause</button>
+                <button class="fd_control_button fd_prev_next_button" id="nextButton" onclick="nextDeliveryMap()">Next</button></td>
+                </div>
+              <td></td>
+            </tr>
+          </table>
+          
           </td>
         </tr>
       </tbody>
