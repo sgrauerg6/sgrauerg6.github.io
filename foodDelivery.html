@@ -22,15 +22,16 @@
           <td class="main_bg_color main_region_block">
 			    <span class="header_color header_size bold_text">Bicycle Food Delivery</span>
           <div id="food_delivery_info_fd_page"></div>
-          <button id="JerseyCity" onclick="changeDeliveryLocation(`Jersey City`)">Jersey City</button>
-          <button id="Manayunk" onclick="changeDeliveryLocation(`Manayunk`)">Manayunk</button>
-          <button id="CenterCity" onclick="changeDeliveryLocation(`Center City`)">Center City</button>
-          <br>
+          <div class="location_buttons">
+          <button id="JerseyCity" class="fd_location_button" onclick="changeDeliveryLocation(`Jersey City`)">Jersey City</button>
+          <button id="Manayunk" class="fd_location_button" onclick="changeDeliveryLocation(`Manayunk`)">Manayunk</button>
+          <button id="CenterCity" class="fd_location_button" onclick="changeDeliveryLocation(`Center City`)">Center City</button>
+          </div>
           <img src="JerseyCityDelivery/delivery_map_0.png" alt="Delivery Maps" id="deliveryDayImg" height="640" onclick="pausePlay()">
           <br>
-          <button class="fd_control_button" id="prevButton" style="width: 75px;" onclick="prevDeliveryMap()">Previous</button>
-          <button class="fd_control_button" id="pausePlayButton" onclick="pausePlay()">Pause</button>
-          <button class="fd_control_button" id="nextButton" style="width: 75px;" onclick="nextDeliveryMap()">Next</button>
+          <button class="fd_control_button fd_prev_next_button" id="prevButton" onclick="prevDeliveryMap()">Previous</button>
+          <button class="fd_control_button fd_playpause_button" id="pausePlayButton" onclick="pausePlay()">Pause</button>
+          <button class="fd_control_button fd_prev_next_button" id="nextButton" onclick="nextDeliveryMap()">Next</button>
           </td>
         </tr>
       </tbody>

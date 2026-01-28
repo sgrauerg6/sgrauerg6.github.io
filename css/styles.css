@@ -117,9 +117,40 @@ ul.taing_list {
 
 .fd_control_button {
   background-color: lightblue;
-  border: none; 
+  border: none;
+  border-radius: 16px;
 }
 
 .pics_image_spacing {
   margin-bottom: 5px;
+}
+
+.fd_location_button {
+  width: 100px;
+  border: none;
+  border-left: 2px solid #007bff;
+  border-right: 2px solid #007bff;
+  border-top: 2px solid #007bff;
+}
+
+.fd_location_active {
+  background-color: green;
+  color: white;
+}
+
+.fd_location_not_active {
+  background-color: lightblue;
+  color: black;
+}
+
+.fd_playpause_button {
+  width: 70px;
+}
+
+.fd_prev_next_button {
+  width: 75px;
+}
+
+.location_buttons {
+  display: flex;
 }

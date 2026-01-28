@@ -1,29 +1,29 @@
 const PIC_1_SRC = "scottGPGPU6.png";
-const PIC_1_ALT_TEXT = "Me at GPGPU 6 (2013)";
+const PIC_1_ALT_TEXT = "At GPGPU 6 (2013) in Houston, Texas";
 const PIC_1_INFO = `At the Sixth Workshop on General Purpose
                 Processing Using GPUs (GPGPU 6) at the Four Seasons
                 Hotel in Houston, Texas in March 2013`;
 
 const PIC_2_SRC = "scottInpar2012.jpg";
-const PIC_2_ALT_TEXT = "Me at Inpar 2012";
+const PIC_2_ALT_TEXT = "At INPAR 2012 in San Jose";
 const PIC_2_INFO = `At the Innovative Parallel Computing
                     (INPAR 2012) at the San Jose Convention Center in
                     San Jose in May 2012`;
 
 const PIC_3_SRC = "scottLcpc2010.jpg";
-const PIC_3_ALT_TEXT = "Scott";
+const PIC_3_ALT_TEXT = "At LCPC 2010 in Houston, Texas";
 const PIC_3_INFO = `At the 23rd International Workshop on Languages and
                     Compilers for Parallel Computing (LCPC 2010) at Rice
                     University in Houston in October 2010`;
 
 const PIC_4_SRC = "Scott.jpg";
-const PIC_4_ALT_TEXT = "picOfMe";
+const PIC_4_ALT_TEXT = "At WACV 2009";
 const PIC_4_INFO = `In front of my poster at the IEEE Workshop on
                   Applications of Computer Vision (WACV) in December
                   2009`;
 
 const PIC_5_SRC = "ScottIcpr2008.jpg";
-const PIC_5_ALT_TEXT = "ScottAtIcpr";
+const PIC_5_ALT_TEXT = "At ICPR 2008";
 const PIC_5_INFO = `At the International Conference of Pattern Recognition
                   (ICPR) in December 2008`;
 

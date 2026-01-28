@@ -65,13 +65,13 @@ function changeDeliveryLocation(location) {
     locDelMaps.forEach(function(locationDelMap, locationName) {
       if (locationName == delivery_location) {
         //set button display for currently selected delivery location
-        locationDelMap.button.style.backgroundColor = "green";
-        locationDelMap.button.style.color = "white";
+        locationDelMap.button.classList.remove('fd_location_not_active');
+        locationDelMap.button.classList.add('fd_location_active');
       }
       else {
         //set button display for other delivery locations
-        locationDelMap.button.style.backgroundColor = "lightblue";
-        locationDelMap.button.style.color = "black";
+        locationDelMap.button.classList.remove('fd_location_active');
+        locationDelMap.button.classList.add('fd_location_not_active');
       }
     });
     
@@ -132,8 +132,6 @@ const nextDeliveryMap = () => {
   delMapIdx = (delMapIdx >= locDelMaps.get(delivery_location).numDelMaps) ? 0 : delMapIdx;
   deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
 }
-
-playPauseBtn.style.width = "70px";
 
 //start delivery map display in play mode
 startPlay();
