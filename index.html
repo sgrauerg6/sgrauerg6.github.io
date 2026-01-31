@@ -52,21 +52,19 @@
                 <table class="tipsData" id="tipsDataId" style="display: none;"></table>
               </td>
               <td id="displayOptionsCell">
-                <label>
-                <input type="radio" id="mapsEarningRButton" name="display_option" onclick="setDelDispOption(this.value)" value="mapsEarnings" checked><span>Delivery Maps and Earnings</span>
-                </label>
+                <div class="radio-toolbar">
+                <input type="radio" id="mapsEarningRButton" name="display_option" onclick="setDelDispOption(this.value)" value="mapsEarnings" checked>
+                <label for="mapsEarningRButton"><span>Delivery Maps and Earnings</span></label>
                 <br>
-                <label>
-                <input type="radio" id="tipsUeGhRButton" name="display_option" onclick="setDelDispOption(this.value)" value="tipsUeGh"><span>Tip breakdown (Uber Eats and Grubhub)</span>
-                </label>
-                <br>
-                <label>
-                <input type="radio" id="tipsUeRButton" name="display_option" onclick="setDelDispOption(this.value)" value="tipsUe"><span>Tip breakdown (Uber Eats only)</span>
-                </label>
-                <br>
-                <label>
-                <input type="radio" id="tipsGhRButton" name="display_option" onclick="setDelDispOption(this.value)" value="tipsGh"><span>Tip breakdown (Grubhub only)</span>
-                </label>
+                <input type="radio" id="tipsUeGhRButton" name="display_option" onclick="setDelDispOption(this.value)" value="tipsUeGh">
+                <label for="tipsUeGhRButton"><span>Tip breakdown</span></label>
+                </div>
+                <div class="delServicesOptions" id="delServicesChBoxes">
+                <input type="checkbox" id="ueCheckbox" name="ueSelection" value="ueOption" checked>
+                <label for="ueCheckbox">Uber Eats</label>
+                <input type="checkbox" id="ghCheckbox" name="ghSelection" value="ghOption" checked>
+                <label for="ghCheckbox">Grubhub</label>
+                </div>
               </td>
               </tr>
               </table>

@@ -62,13 +62,18 @@ const tipBreakdownGh = new Map([
 function addTipBreakdown() {
   //Get a reference to the table element
   let tipBreakdownTbl = document.getElementById("tipsDataId");
+  tipBreakdownTbl.width = imgWidth.toString() + "px";
+  console.log(imgWidth.toString());
 
   let headerRow = tipBreakdownTbl.insertRow(-1);
+  headerRow.width = imgWidth;
   let cell0 = headerRow.insertCell(-1);
   let cell1 = headerRow.insertCell(-1);
+  cell0.width = Math.ceil(imgWidth * 0.3);
   cell0.innerHTML = `<span class="bold_text">Tip Amount</span>`;
   cell0.classList.add("tipsDataHeaderAmount");
-  cell1.innerHTML = `<span class="bold_text">% Deliveries w/ Tip &lt= Amount</span>`;
+  cell1.width = imgWidth - cell0.width;
+  cell1.innerHTML = `<span class="bold_text">% Deliveries w/ Tip &le; Amount</span>`;
   cell1.classList.add("tipsDataHeaderResult");
 
   // Format as USD in the en-US locale
@@ -86,6 +91,8 @@ function addTipBreakdown() {
     cell1.innerHTML = percentWTipOrLess.toFixed(1);
     cell1.classList.add("tipsDataResult");
   });
+
+  tipBreakdownAdded = true;
 }
 
 //mapping of delivery location to delivery map for location
@@ -113,11 +120,14 @@ let delivery_location = "Jersey City";
 //boolean indicating whether delivery map display is in play mode or not
 let play = true;
 let playBeforeInterrupt = false;
+let tipBreakdownAdded = false;
 
 //display interval used when play mode is enabled where displayed delivery
 //map automatically goes to next delivery map every second and then wraps
 //around when the last delivery map for location is reached
 let displayInterval;
+
+let imgWidth;
 
 //change delivery location for displayed delivery map
 function changeDeliveryLocation(location) {
@@ -164,7 +174,7 @@ function changeDeliveryLocation(location) {
     }
 
     // Get the image element
-    const imgElement = document.getElementById('deliveryDayImg');
+    let imgElement = document.getElementById('deliveryDayImg');
 
     //wait for image in new location to load before adjusting
     //display options
@@ -175,10 +185,19 @@ function changeDeliveryLocation(location) {
       //show display of toggle between showing maps and tip breakdown
       //if location is Jersey City
       if (delivery_location === "Jersey City") {
-        dispOptionsCell.style.display = "none";//"table-cell";
+        dispOptionsCell.style.display = "table-cell";
         document.getElementById("mapsEarningRButton").checked = true;
       }
+      
     }, { once: true });
+
+    imgElement.onload = function() {
+      imgWidth = deliveryDayImg.width;
+      console.log(imgWidth.toString());
+      if (!tipBreakdownAdded) {
+        addTipBreakdown();
+      }
+    };
 };
 
 //start play mode where displayed delivery map for current location is automatically
@@ -232,11 +251,13 @@ function setDelDispOption(delDispOption) {
   const mapsEarningsView = document.getElementById("deliveryDayImg");
   const tipsDataView = document.getElementById("tipsDataId");
   const fdControlButtons = document.getElementById("fd_control_buttons_table_id");
+  const delServicesCheckboxes = document.getElementById("delServicesChBoxes");
   if (delDispOption === "mapsEarnings") {
     //change to display of delivery maps with earnings
     tipsDataView.style.display = 'none';
     mapsEarningsView.style.display = 'block';
     fdControlButtons.style.display = 'block';
+    delServicesCheckboxes.style.display = 'none';
     if (!play) {
       if (playBeforeInterrupt) {
         //start play if setting was play before interrupt
@@ -251,6 +272,7 @@ function setDelDispOption(delDispOption) {
     mapsEarningsView.style.display = 'none';
     tipsDataView.style.display = 'block';
     fdControlButtons.style.display = 'none';
+    delServicesCheckboxes.style.display = 'block';
     //store play/pause setting before interrupt due
     //to switching to show tip breakdown
     playBeforeInterrupt = (play || playBeforeInterrupt);
@@ -269,7 +291,7 @@ startPlay();
 //start delivery location at Jersey City
 changeDeliveryLocation("Jersey City");
 
-addTipBreakdown();
+//addTipBreakdown();
 
 //food delivery info to display on food delivery page
 const FOOD_DELIVERY_INFO_FD_PAGE =
