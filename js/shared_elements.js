@@ -1,19 +1,19 @@
 const LEFT_MENU_DATA_CELL = `
-            <div id="index_page"><a href="index.html">Home</a><br></div></div>
-            <br>
-            <div id="research_page"><a href="research.html">Research</a><br></div>
-            <br>
-            <div id="publications_page"><a href="publications.html">Publications</a><br></div>
-            <br>
-            <div id="teaching_page"><a href="teaching.html">Teaching/TAing</a><br></div>
-            <br>
-            <div id="pictures_page"><a href="pictures.html">Pictures</a><br></div>
-            <br>
-            <div id="other_work_page"><a href="otherwork.html">Other Work</a><br></div>
-			<br>
-  			<div id="food_delivery_page"><a href="foodDelivery.html">Food Delivery</a><br></div>
-			<br>
-			<div id="photo_map_page"><a href="photomap.html">Photo Map</a><br></div>`;
+  <div id="index_page"><a href="index.html">Home</a><br></div></div>
+  <br>
+  <div id="research_page"><a href="research.html">Research</a><br></div>
+  <br>
+  <div id="publications_page"><a href="publications.html">Publications</a><br></div>
+  <br>
+  <div id="teaching_page"><a href="teaching.html">Teaching/TAing</a><br></div>
+  <br>
+  <div id="pictures_page"><a href="pictures.html">Pictures</a><br></div>
+  <br>
+  <div id="other_work_page"><a href="otherwork.html">Other Work</a><br></div>
+	<br>
+  <div id="food_delivery_page"><a href="foodDelivery.html">Food Delivery</a><br></div>
+	<br>
+	<div id="photo_map_page"><a href="photomap.html">Photo Map</a><br></div>`;
 
 function addTopRowWLinks() {
   // Get a reference to the table element
@@ -28,8 +28,9 @@ function addTopRowWLinks() {
 
   cell0.colSpan = 3;
   cell0.classList.add("top_table_cell");
-  cell0.innerHTML = `<a href="http://www.cis.udel.edu/">Udel CIS Home</a> |
-<a href="http://udel.edu/">Udel Home</a></td>`
+  cell0.innerHTML = `
+    <a href="http://www.cis.udel.edu/">Udel CIS Home</a> |
+    <a href="http://udel.edu/">Udel Home</a></td>`
 }
 
 function addSecondRow() {

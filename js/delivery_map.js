@@ -19,6 +19,75 @@ class LocationDelMaps {
   }
 }
 
+//mapping of tip amount to percent of deliveries with amount or less
+const tipBreakdownUeGh = new Map([
+  [0, 10.0],
+  [1, 20.0],
+  [2, 30.0],
+  [3, 40.0],
+  [4, 50.0],
+  [5, 60.0],
+  [6, 70.0],
+  [7, 80.0],
+  [8, 90.0],
+  [9, 95.0],
+  [10, 97.5]]);
+
+const tipBreakdownUe = new Map([
+  [0, 10.0],
+  [1, 20.0],
+  [2, 30.0],
+  [3, 40.0],
+  [4, 50.0],
+  [5, 60.0],
+  [6, 70.0],
+  [7, 80.0],
+  [8, 90.0],
+  [9, 95.0],
+  [10, 97.5]]);
+
+const tipBreakdownGh = new Map([
+  [0, 10.0],
+  [1, 20.0],
+  [2, 30.0],
+  [3, 40.0],
+  [4, 50.0],
+  [5, 60.0],
+  [6, 70.0],
+  [7, 80.0],
+  [8, 90.0],
+  [9, 95.0],
+  [10, 97.5]]);
+
+function addTipBreakdown() {
+  //Get a reference to the table element
+  let tipBreakdownTbl = document.getElementById("tipsDataId");
+
+  let headerRow = tipBreakdownTbl.insertRow(-1);
+  let cell0 = headerRow.insertCell(-1);
+  let cell1 = headerRow.insertCell(-1);
+  cell0.innerHTML = `<span class="bold_text">Tip Amount</span>`;
+  cell0.classList.add("tipsDataHeaderAmount");
+  cell1.innerHTML = `<span class="bold_text">% Deliveries w/ Tip &lt= Amount</span>`;
+  cell1.classList.add("tipsDataHeaderResult");
+
+  // Format as USD in the en-US locale
+  const formatterUS = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  });
+  
+  tipBreakdownUeGh.forEach(function(percentWTipOrLess, tipAmount) {
+    let tipAmountRow = tipBreakdownTbl.insertRow(-1);
+    let cell0 = tipAmountRow.insertCell(-1);
+    let cell1 = tipAmountRow.insertCell(-1);
+    cell0.innerHTML = formatterUS.format(tipAmount);
+    cell0.classList.add("tipsDataAmount");
+    cell1.innerHTML = percentWTipOrLess.toFixed(1);
+    cell1.classList.add("tipsDataResult");
+  });
+}
+
 //mapping of delivery location to delivery map for location
 const locDelMaps = new Map([
   ["Jersey City",
@@ -43,6 +112,7 @@ let delivery_location = "Jersey City";
 
 //boolean indicating whether delivery map display is in play mode or not
 let play = true;
+let playBeforeInterrupt = false;
 
 //display interval used when play mode is enabled where displayed delivery
 //map automatically goes to next delivery map every second and then wraps
@@ -57,6 +127,13 @@ function changeDeliveryLocation(location) {
 
     //set selected delivery location
     delivery_location = location;
+
+    //retrieve table cell with toggle to switch between showing
+    //maps and tips
+    //turn off display of cell for now and turn back on at end of
+    //function if location is Jersey City
+    let dispOptionsCell = document.getElementById("displayOptionsCell");
+    dispOptionsCell.style.display = "none";
 
     //set delivery map index to 0 for selected delivery location
     delMapIdx = 0;
@@ -85,6 +162,23 @@ function changeDeliveryLocation(location) {
       //at current delivery map index
       deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
     }
+
+    // Get the image element
+    const imgElement = document.getElementById('deliveryDayImg');
+
+    //wait for image in new location to load before adjusting
+    //display options
+    imgElement.addEventListener('load', () => {
+      //set to display maps/earnings images
+      setDelDispOption("mapsEarnings");
+
+      //show display of toggle between showing maps and tip breakdown
+      //if location is Jersey City
+      if (delivery_location === "Jersey City") {
+        dispOptionsCell.style.display = "none";//"table-cell";
+        document.getElementById("mapsEarningRButton").checked = true;
+      }
+    }, { once: true });
 };
 
 //start play mode where displayed delivery map for current location is automatically
@@ -133,11 +227,49 @@ const nextDeliveryMap = () => {
   deliveryDayImg.src = locDelMaps.get(delivery_location).imagePath(delMapIdx);
 }
 
+//set delivery display option
+function setDelDispOption(delDispOption) {
+  const mapsEarningsView = document.getElementById("deliveryDayImg");
+  const tipsDataView = document.getElementById("tipsDataId");
+  const fdControlButtons = document.getElementById("fd_control_buttons_table_id");
+  if (delDispOption === "mapsEarnings") {
+    //change to display of delivery maps with earnings
+    tipsDataView.style.display = 'none';
+    mapsEarningsView.style.display = 'block';
+    fdControlButtons.style.display = 'block';
+    if (!play) {
+      if (playBeforeInterrupt) {
+        //start play if setting was play before interrupt
+        //from switching to tip breakdown
+        playBeforeInterrupt = false;
+        pausePlay();
+      }
+    }
+  }
+  else {
+    //switch to display of tip breakdown
+    mapsEarningsView.style.display = 'none';
+    tipsDataView.style.display = 'block';
+    fdControlButtons.style.display = 'none';
+    //store play/pause setting before interrupt due
+    //to switching to show tip breakdown
+    playBeforeInterrupt = (play || playBeforeInterrupt);
+    //pause play of delivery maps if currently running
+    if (play) {
+      play = false;
+      playPauseBtn.innerHTML = "Play";
+      clearInterval(displayInterval);
+    }
+  }
+}
+
 //start delivery map display in play mode
 startPlay();
 
 //start delivery location at Jersey City
 changeDeliveryLocation("Jersey City");
+
+addTipBreakdown();
 
 //food delivery info to display on food delivery page
 const FOOD_DELIVERY_INFO_FD_PAGE =

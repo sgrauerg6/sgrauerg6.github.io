@@ -45,19 +45,43 @@
             <button id="Manayunk" class="fd_location_button" onclick="changeDeliveryLocation(`Manayunk`)">Manayunk</button>
             <button id="CenterCity" class="fd_location_button" onclick="changeDeliveryLocation(`Center City`)">Center City</button>
             </div>
-            <img src="JerseyCityDelivery/delivery_map_0.png" alt="Delivery Maps" id="deliveryDayImg" height="450" onclick="pausePlay()">
-            <br>
-            <table class="fd_control_buttons_table">
-              <tr>
-                <td>
-                  <div class="control_buttons">
-                  <button class="fd_control_button fd_prev_next_button" id="prevButton" onclick="prevDeliveryMap()">Previous</button>
-                  <button class="fd_control_button fd_playpause_button" id="pausePlayButton" onclick="pausePlay()">Pause</button>
-                  <button class="fd_control_button fd_prev_next_button" id="nextButton" onclick="nextDeliveryMap()">Next</button></td>
-                  </div>
-                <td></td>
+            <table class="delivery_maps_table">
+              <tr class="del_disp_option">
+              <td>
+                <img src="JerseyCityDelivery/delivery_map_0.png" alt="Delivery Maps" id="deliveryDayImg" height="450" onclick="pausePlay()">
+                <table class="tipsData" id="tipsDataId" style="display: none;"></table>
+              </td>
+              <td id="displayOptionsCell">
+                <label>
+                <input type="radio" id="mapsEarningRButton" name="display_option" onclick="setDelDispOption(this.value)" value="mapsEarnings" checked><span>Delivery Maps and Earnings</span>
+                </label>
+                <br>
+                <label>
+                <input type="radio" id="tipsUeGhRButton" name="display_option" onclick="setDelDispOption(this.value)" value="tipsUeGh"><span>Tip breakdown (Uber Eats and Grubhub)</span>
+                </label>
+                <br>
+                <label>
+                <input type="radio" id="tipsUeRButton" name="display_option" onclick="setDelDispOption(this.value)" value="tipsUe"><span>Tip breakdown (Uber Eats only)</span>
+                </label>
+                <br>
+                <label>
+                <input type="radio" id="tipsGhRButton" name="display_option" onclick="setDelDispOption(this.value)" value="tipsGh"><span>Tip breakdown (Grubhub only)</span>
+                </label>
+              </td>
               </tr>
-            </table>
+              </table>
+              <table class="fd_control_buttons_table" id="fd_control_buttons_table_id">
+                <tr>
+                  <td>
+                    <div class="control_buttons">
+                    <button class="fd_control_button fd_prev_next_button" id="prevButton" onclick="prevDeliveryMap()">Previous</button>
+                    <button class="fd_control_button fd_playpause_button" id="pausePlayButton" onclick="pausePlay()">Pause</button>
+                    <button class="fd_control_button fd_prev_next_button" id="nextButton" onclick="nextDeliveryMap()">Next</button>
+                    </div>
+                  </td>
+                  <td></td>
+                </tr>
+              </table>
             <script type="text/javascript" src="js/delivery_map.js"></script>
             <br>
             <div id="deliveryDescIndexPage">

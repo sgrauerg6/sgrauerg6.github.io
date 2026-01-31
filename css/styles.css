@@ -127,7 +127,7 @@ ul.taing_list {
 
 .fd_location_button {
   width: 100px;
-  border: none;
+  border-bottom: 0px;
   border-left: 2px solid #007bff;
   border-right: 2px solid #007bff;
   border-top: 2px solid #007bff;
@@ -137,11 +137,31 @@ ul.taing_list {
 .fd_location_active {
   background-color: green;
   color: white;
+  font-weight: bold;
 }
 
 .fd_location_not_active {
   background-color: lightblue;
   color: black;
+}
+
+.delivery_maps_table {
+  border-spacing: 0px;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.del_disp_option {
+  padding: 0px;
+  margin: 0px;
+}
+
+table.delivery_maps_table th, 
+table.delivery_maps_table td {
+  padding: 0px;
+  margin: 0px;
+  vertical-align: top;
 }
 
 .fd_control_buttons_table {
@@ -169,6 +189,8 @@ table.fd_control_buttons_table td {
 
 .location_buttons {
   display: flex;
+  padding: 0px;
+  margin: 0px;
 }
 
 .control_buttons {
@@ -180,3 +202,89 @@ table.fd_control_buttons_table td {
   padding-bottom: 3px;
   margin: 0px;
 }
+
+.tipsDataHeaderAmount {
+  font-size: 20px;
+  width: 150px;
+  height: 34px;
+  color: white;
+  background-color: darkblue;
+  border-bottom: 2px solid black;
+  border-right: 1px dotted gray;
+}
+
+.tipsDataHeaderResult {
+  font-size: 20px;
+  width: 275px;
+  height: 34px;
+  color: white;
+  background-color: darkblue;
+  border-bottom: 2px solid black;
+  padding-left: 3px;
+}
+
+.tipsDataAmount {
+  width: 150px;
+  height: 25px;
+  background-color: white;
+  border-bottom: 1px dotted gray;
+  border-right: 1px dotted gray;
+}
+
+.tipsDataResult {
+  height: 25px;
+  width: 275px;
+  background-color: white;
+  border-bottom: 1px dotted gray;
+  padding-left: 3px;
+}
+
+.tipsData {
+  border-spacing: 0px;
+  border: none;
+  background-color: yellow;
+  border-collapse: collapse;
+}
+
+table.tipsData th, 
+table.tipsData td {
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 5px;
+  margin: 0px;
+  vertical-align: bottom;
+}
+
+/* Hide the actual radio button */
+.radio-toolbar input[type="radio"] {
+  opacity: 0; /* Makes the original input invisible but still accessible/functional */
+  position: fixed;
+  width: 0;
+}
+
+/* Style the label as a button */
+.radio-toolbar label {
+  display: inline-block;
+  background-color: lightblue;
+  padding: 5px 5px;
+  /*font-family: sans-serif;*/
+  border: 2px solid #007bff;
+  width: 360px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Change the color of the label when the associated radio input is checked */
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color: green; /* Green background when checked */
+  color: white; /* White text for contrast */
+  border: 2px solid #007bff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Add hover effects for better user experience */
+/*.radio-toolbar label:hover {
+  background-color: #ddd;
+}*/
