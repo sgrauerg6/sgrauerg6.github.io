@@ -112,7 +112,7 @@ function addTipBreakdown() {
       cell0.classList.add("tipsDataAmount");
       cell1.classList.add("tipsDataResult");
       if (i == 0) {
-        cell0.innerHTML = formatterUS.format(i) + " - " + formatterUS.format(i);
+        cell0.innerHTML = formatterUS.format(i);
         cell1.innerHTML = tipInfo.at(i).toFixed(1);
       }
       else if (i == (tipInfo.length)) {
