@@ -117,6 +117,7 @@ ul.taing_list {
 
 .fd_control_button {
   background-color: lightblue;
+  color: black;
   border: none;
   cursor: pointer;
 }
@@ -126,6 +127,7 @@ ul.taing_list {
 }
 
 .fd_location_button {
+  color: black;
   width: 100px;
   border-bottom: 0px;
   border-left: 2px solid #007bff;
