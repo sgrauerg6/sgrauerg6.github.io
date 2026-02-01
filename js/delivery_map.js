@@ -19,7 +19,8 @@ class LocationDelMaps {
   }
 }
 
-//mapping of tip amount to percent of deliveries with amount or less
+//tip amount corresponding to percent of deliveries with amount or less
+//at each index where dollar amount corresponds to index
 const tipBreakdownUeGh = new Array(
   13.35,
   22.41,
