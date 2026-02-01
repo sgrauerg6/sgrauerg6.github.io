@@ -20,44 +20,44 @@ class LocationDelMaps {
 }
 
 //mapping of tip amount to percent of deliveries with amount or less
-const tipBreakdownUeGh = new Map([
-  [0, 13.35],
-  [1, 22.41],
-  [2, 35.38],
-  [3, 51.50],
-  [4, 64.39],
-  [5, 78.51],
-  [6, 85.11],
-  [7, 89.33],
-  [8, 92.48],
-  [9, 94.86],
-  [10, 97.01]]);
+const tipBreakdownUeGh = new Array(
+  13.35,
+  22.41,
+  35.38,
+  51.50,
+  64.39,
+  78.51,
+  85.11,
+  89.33,
+  92.48,
+  94.86,
+  97.01);
 
-const tipBreakdownUe = new Map([
-  [0, 19.83],
-  [1, 33.50],
-  [2, 46.50],
-  [3, 61.71],
-  [4, 72.31],
-  [5, 84.27],
-  [6, 89.91],
-  [7, 93.16],
-  [8, 94.36],
-  [9, 95.73],
-  [10, 97.09]]);
+const tipBreakdownUe = new Array(
+  19.83,
+  33.50,
+  46.50,
+  61.71,
+  72.31,
+  84.27,
+  89.91,
+  93.16,
+  94.36,
+  95.73,
+  97.09);
 
-const tipBreakdownGh = new Map([
-  [0, 8.08],
-  [1, 13.37],
-  [2, 26.32],
-  [3, 43.18],
-  [4, 57.94],
-  [5, 73.82],
-  [6, 81.20],
-  [7, 86.21],
-  [8, 90.95],
-  [9, 94.15],
-  [10, 96.94]]);
+const tipBreakdownGh = new Array(
+  8.08,
+  13.37,
+  26.32,
+  43.18,
+  57.94,
+  73.82,
+  81.20,
+  86.21,
+  90.95,
+  94.15,
+  96.94);
 
 //add or update table for tip breakdown corresponding to current selections
 function addTipBreakdown() {
@@ -79,10 +79,10 @@ function addTipBreakdown() {
   let cell0 = headerRow.insertCell(-1);
   let cell1 = headerRow.insertCell(-1);
   cell0.width = Math.ceil(imgWidth * 0.3);
-  cell0.innerHTML = `<span class="bold_text">Tip Amount</span>`;
+  cell0.innerHTML = `<span class="bold_text">Tip Range</span>`;
   cell0.classList.add("tipsDataHeaderAmount");
   cell1.width = imgWidth - cell0.width;
-  cell1.innerHTML = `<span class="bold_text">% Deliveries w/ Tip &le; Amount</span>`;
+  cell1.innerHTML = `<span class="bold_text">% Deliveries</span>`;
   cell1.classList.add("tipsDataHeaderResult");
 
   // Format as USD in the en-US locale
@@ -105,15 +105,25 @@ function addTipBreakdown() {
 
   //add tip info to table
   if (tipInfo !== undefined) {
-    tipInfo.forEach(function(percentWTipOrLess, tipAmount) {
+    for (let i = 0; i <= tipInfo.length; i++) {      
       let tipAmountRow = tipBreakdownTbl.insertRow(-1);
       let cell0 = tipAmountRow.insertCell(-1);
       let cell1 = tipAmountRow.insertCell(-1);
-      cell0.innerHTML = formatterUS.format(tipAmount);
       cell0.classList.add("tipsDataAmount");
-      cell1.innerHTML = percentWTipOrLess.toFixed(1);
       cell1.classList.add("tipsDataResult");
-    });
+      if (i == 0) {
+        cell0.innerHTML = formatterUS.format(i) + " - " + formatterUS.format(i);
+        cell1.innerHTML = tipInfo.at(i).toFixed(1);
+      }
+      else if (i == (tipInfo.length)) {
+        cell0.innerHTML = formatterUS.format(i - 1) + "+";
+        cell1.innerHTML = (100 - tipInfo.at(-1)).toFixed(1);
+      }
+      else {
+        cell0.innerHTML = formatterUS.format(i - 0.99) + " - " + formatterUS.format(i);
+        cell1.innerHTML = (tipInfo.at(i) - tipInfo.at(i-1)).toFixed(1);
+      }
+    }
   }
 
   tipBreakdownAdded = true;
