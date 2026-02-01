@@ -21,50 +21,59 @@ class LocationDelMaps {
 
 //mapping of tip amount to percent of deliveries with amount or less
 const tipBreakdownUeGh = new Map([
-  [0, 10.0],
-  [1, 20.0],
-  [2, 30.0],
-  [3, 40.0],
-  [4, 50.0],
-  [5, 60.0],
-  [6, 70.0],
-  [7, 80.0],
-  [8, 90.0],
-  [9, 95.0],
-  [10, 97.5]]);
+  [0, 13.35],
+  [1, 22.41],
+  [2, 35.38],
+  [3, 51.50],
+  [4, 64.39],
+  [5, 78.51],
+  [6, 85.11],
+  [7, 89.33],
+  [8, 92.48],
+  [9, 94.86],
+  [10, 97.01]]);
 
 const tipBreakdownUe = new Map([
-  [0, 10.0],
-  [1, 20.0],
-  [2, 30.0],
-  [3, 40.0],
-  [4, 50.0],
-  [5, 60.0],
-  [6, 70.0],
-  [7, 80.0],
-  [8, 90.0],
-  [9, 95.0],
-  [10, 97.5]]);
+  [0, 19.83],
+  [1, 33.50],
+  [2, 46.50],
+  [3, 61.71],
+  [4, 72.31],
+  [5, 84.27],
+  [6, 89.91],
+  [7, 93.16],
+  [8, 94.36],
+  [9, 95.73],
+  [10, 97.09]]);
 
 const tipBreakdownGh = new Map([
-  [0, 10.0],
-  [1, 20.0],
-  [2, 30.0],
-  [3, 40.0],
-  [4, 50.0],
-  [5, 60.0],
-  [6, 70.0],
-  [7, 80.0],
-  [8, 90.0],
-  [9, 95.0],
-  [10, 97.5]]);
+  [0, 8.08],
+  [1, 13.37],
+  [2, 26.32],
+  [3, 43.18],
+  [4, 57.94],
+  [5, 73.82],
+  [6, 81.20],
+  [7, 86.21],
+  [8, 90.95],
+  [9, 94.15],
+  [10, 96.94]]);
 
+//add or update table for tip breakdown corresponding to current selections
 function addTipBreakdown() {
   //Get a reference to the table element
   let tipBreakdownTbl = document.getElementById("tipsDataId");
+
+  //remove all rows on table if previously generated
+  for (let i = tipBreakdownTbl.rows.length - 1; i >= 0; i--) {
+    tipBreakdownTbl.deleteRow(i);
+  }
+
   tipBreakdownTbl.width = imgWidth.toString() + "px";
   console.log(imgWidth.toString());
 
+  //add table header with titles for tip amount and percent
+  //of deliveries with tip less than or equal to amount
   let headerRow = tipBreakdownTbl.insertRow(-1);
   headerRow.width = imgWidth;
   let cell0 = headerRow.insertCell(-1);
@@ -81,16 +90,31 @@ function addTipBreakdown() {
     style: 'currency',
     currency: 'USD'
   });
-  
-  tipBreakdownUeGh.forEach(function(percentWTipOrLess, tipAmount) {
-    let tipAmountRow = tipBreakdownTbl.insertRow(-1);
-    let cell0 = tipAmountRow.insertCell(-1);
-    let cell1 = tipAmountRow.insertCell(-1);
-    cell0.innerHTML = formatterUS.format(tipAmount);
-    cell0.classList.add("tipsDataAmount");
-    cell1.innerHTML = percentWTipOrLess.toFixed(1);
-    cell1.classList.add("tipsDataResult");
-  });
+
+  //retrieve tip info corresponding to current selection for Uber Eats and Grubhub options
+  let tipInfo;
+  if ((document.getElementById("ueCheckbox").checked) && (document.getElementById("ghCheckbox").checked)) {
+    tipInfo = tipBreakdownUeGh;
+  }
+  else if ((!(document.getElementById("ueCheckbox").checked)) && (document.getElementById("ghCheckbox").checked)) {
+    tipInfo = tipBreakdownGh;
+  }
+  else if ((document.getElementById("ueCheckbox").checked) && (!(document.getElementById("ghCheckbox").checked))) {
+    tipInfo = tipBreakdownUe;
+  }
+
+  //add tip info to table
+  if (tipInfo !== undefined) {
+    tipInfo.forEach(function(percentWTipOrLess, tipAmount) {
+      let tipAmountRow = tipBreakdownTbl.insertRow(-1);
+      let cell0 = tipAmountRow.insertCell(-1);
+      let cell1 = tipAmountRow.insertCell(-1);
+      cell0.innerHTML = formatterUS.format(tipAmount);
+      cell0.classList.add("tipsDataAmount");
+      cell1.innerHTML = percentWTipOrLess.toFixed(1);
+      cell1.classList.add("tipsDataResult");
+    });
+  }
 
   tipBreakdownAdded = true;
 }
